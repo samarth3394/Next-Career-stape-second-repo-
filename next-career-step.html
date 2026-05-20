@@ -1,0 +1,1188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Career Step</title>
+</head>
+<body>
+  <main>
+    <h1>Next Career Step</h1>
+    <p>Your page is ready to customize.</p>
+  </main>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Next Career Step</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#F5F4F0;
+  --ink:#0F0F0E;
+  --muted:#6A6A66;
+  --line:rgba(15,15,14,0.09);
+  --card:#FFFFFF;
+  --green:#2A6049;
+  --green-light:#EAF2EE;
+  --tag:#ECEAE6;
+  --radius:16px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 52px;
+  background:rgba(245,244,240,0.88);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.logo{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;letter-spacing:-0.01em;}
+.logo span{color:var(--green);}
+.nav-links{display:flex;gap:34px;list-style:none;}
+.nav-links a{font-size:0.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--ink);}
+.nav-cta{
+  font-size:0.85rem;font-weight:600;
+  background:var(--ink);color:#fff;
+  padding:10px 22px;border-radius:50px;
+  text-decoration:none;transition:opacity .2s;
+}
+.nav-cta:hover{opacity:.8;}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:0;
+  padding:120px 52px 80px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-glow{
+  position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(ellipse 60% 60% at 70% 50%,rgba(42,96,73,0.08) 0%,transparent 70%),
+    radial-gradient(ellipse 40% 40% at 10% 80%,rgba(15,15,14,0.04) 0%,transparent 60%);
+}
+.hero-left{position:relative;z-index:1;}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--tag);border:1px solid var(--line);
+  border-radius:50px;padding:6px 16px;
+  font-size:0.78rem;font-weight:500;color:var(--muted);
+  margin-bottom:28px;
+  animation:fadeUp .6s ease both;
+}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
+.hero h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(2.8rem,5vw,5rem);
+  font-weight:300;line-height:1.08;letter-spacing:-0.03em;
+  animation:fadeUp .7s .1s ease both;
+}
+.hero h1 em{font-style:italic;color:var(--green);}
+.hero-sub{
+  font-size:1.05rem;color:var(--muted);font-weight:300;
+  line-height:1.7;margin-top:22px;max-width:440px;
+  animation:fadeUp .7s .2s ease both;
+}
+.hero-actions{
+  display:flex;gap:12px;margin-top:38px;flex-wrap:wrap;
+  animation:fadeUp .7s .3s ease both;
+}
+.btn-dark{background:var(--ink);color:#fff;padding:13px 28px;border-radius:50px;font-size:.9rem;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(15,15,14,.15);}
+.btn-dark:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(15,15,14,.22);}
+.btn-outline{border:1.5px solid var(--line);color:var(--ink);padding:13px 28px;border-radius:50px;font-size:.9rem;font-weight:500;text-decoration:none;transition:.2s;}
+.btn-outline:hover{border-color:var(--ink);background:rgba(15,15,14,.04);}
+
+/* hero photo right */
+.hero-right{
+  position:relative;z-index:1;
+  display:flex;justify-content:flex-end;align-items:center;
+  animation:fadeUp .7s .25s ease both;
+}
+.photo-frame{
+  position:relative;
+  width:380px;height:460px;
+}
+.photo-frame img,.photo-placeholder{
+  width:100%;height:100%;
+  object-fit:cover;
+  border-radius:24px 24px 80px 24px;
+  display:block;
+}
+.photo-placeholder{
+  background:linear-gradient(145deg,#d4e8df 0%,#b8d4c8 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:12px;color:var(--green);
+  border-radius:24px 24px 80px 24px;
+}
+.photo-placeholder svg{opacity:.4;}
+.photo-placeholder span{font-size:.85rem;font-weight:500;opacity:.6;}
+.photo-tag{
+  position:absolute;bottom:28px;left:-28px;
+  background:#fff;border:1px solid var(--line);
+  border-radius:14px;padding:14px 18px;
+  box-shadow:0 8px 32px rgba(15,15,14,.1);
+  display:flex;align-items:center;gap:12px;
+  animation:fadeUp .8s .5s ease both;
+}
+.photo-tag-icon{width:38px;height:38px;border-radius:10px;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+.photo-tag-text{font-size:.78rem;}
+.photo-tag-text strong{display:block;font-weight:600;font-size:.88rem;}
+.photo-tag-text span{color:var(--muted);}
+.photo-shape{
+  position:absolute;top:-20px;right:-20px;
+  width:120px;height:120px;
+  border:2px dashed rgba(42,96,73,.2);
+  border-radius:50%;
+  animation:spin 18s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* ─── CATEGORY TABS ─── */
+.cat-section{padding:80px 52px 0;}
+.cat-tabs{
+  display:flex;gap:12px;margin-bottom:48px;flex-wrap:wrap;
+}
+.cat-tab{
+  padding:10px 24px;border-radius:50px;
+  font-size:.9rem;font-weight:500;cursor:pointer;
+  border:1.5px solid var(--line);background:transparent;color:var(--muted);
+  transition:.2s;
+}
+.cat-tab.active,.cat-tab:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+.cat-content{display:none;}
+.cat-content.active{display:block;}
+
+/* ─── SERVICES (Cat 1) ─── */
+.services-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+.svc-card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:36px 30px;
+  transition:transform .25s,box-shadow .25s;
+  position:relative;overflow:hidden;
+}
+.svc-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--green),transparent);
+  transform:scaleX(0);transform-origin:left;transition:transform .3s;
+}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(15,15,14,.08);}
+.svc-card:hover::after{transform:scaleX(1);}
+.svc-icon{width:48px;height:48px;border-radius:12px;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:20px;}
+.svc-card h3{font-size:1.05rem;font-weight:600;margin-bottom:10px;letter-spacing:-.01em;}
+.svc-card p{font-size:.875rem;color:var(--muted);line-height:1.65;margin-bottom:18px;}
+.svc-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.svc-tag{font-size:.72rem;font-weight:600;background:var(--tag);color:var(--muted);padding:3px 10px;border-radius:50px;letter-spacing:.03em;}
+
+/* ─── LEARNING (Cat 2) ─── */
+.learning-hero{
+  background:var(--ink);border-radius:20px;
+  padding:48px;margin-bottom:36px;color:#fff;
+  display:flex;align-items:center;justify-content:space-between;gap:32px;
+  flex-wrap:wrap;
+}
+.learning-hero h2{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:300;letter-spacing:-.025em;max-width:380px;}
+.learning-hero h2 em{font-style:italic;color:#7EC8A4;}
+.learning-hero p{font-size:.9rem;color:rgba(255,255,255,.55);max-width:300px;line-height:1.65;}
+.learning-stats{display:flex;gap:32px;}
+.lstat-num{font-family:'Fraunces',serif;font-size:2rem;font-weight:400;color:#fff;}
+.lstat-label{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:2px;}
+
+.learning-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
+.course-card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;
+  transition:transform .25s,box-shadow .25s;
+}
+.course-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(15,15,14,.08);}
+.course-thumb{
+  height:150px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.5rem;
+  position:relative;overflow:hidden;
+}
+.course-thumb.c1{background:linear-gradient(135deg,#e8f4f0,#c8e6da);}
+.course-thumb.c2{background:linear-gradient(135deg,#e8eef8,#c8d8f0);}
+.course-thumb.c3{background:linear-gradient(135deg,#f8f0e8,#f0d8c0);}
+.course-thumb.c4{background:linear-gradient(135deg,#f0e8f8,#d8c8f0);}
+.course-thumb.c5{background:linear-gradient(135deg,#f8f8e8,#e8e8b0);}
+.course-thumb.c6{background:linear-gradient(135deg,#f8e8e8,#f0c8c8);}
+.course-badge{
+  position:absolute;top:12px;right:12px;
+  font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  padding:3px 10px;border-radius:50px;
+}
+.badge-video{background:#FF4444;color:#fff;}
+.badge-pdf{background:#2A6049;color:#fff;}
+.badge-course{background:#1a1a18;color:#fff;}
+.badge-free{background:#fff;color:#2A6049;border:1px solid var(--green-light);}
+.course-body{padding:22px 24px;}
+.course-meta{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.course-meta span{font-size:.72rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;}
+.course-meta .dot-sep{width:3px;height:3px;border-radius:50%;background:var(--line);}
+.course-card h3{font-size:.975rem;font-weight:600;line-height:1.4;margin-bottom:8px;letter-spacing:-.01em;}
+.course-card p{font-size:.825rem;color:var(--muted);line-height:1.6;margin-bottom:18px;}
+.course-footer{display:flex;align-items:center;justify-content:space-between;}
+.course-price{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:400;}
+.course-price.free{color:var(--green);}
+.course-btn{
+  font-size:.78rem;font-weight:600;
+  padding:7px 16px;border-radius:50px;
+  text-decoration:none;transition:.2s;
+  background:var(--tag);color:var(--ink);
+  border:1px solid var(--line);
+}
+.course-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+/* ─── ABOUT ─── */
+.about{
+  padding:100px 52px;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+.about-photo-wrap{position:relative;}
+.about-photo-frame{
+  width:100%;max-width:380px;height:400px;
+  border-radius:20px 80px 20px 20px;overflow:hidden;
+  position:relative;
+}
+.about-photo-frame img,.about-photo-ph{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.about-photo-ph{
+  background:linear-gradient(145deg,#c8e0d8,#a8c8bc);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;color:var(--green);
+}
+.about-photo-ph span{font-size:.8rem;opacity:.6;}
+.about-accent{
+  position:absolute;bottom:-20px;right:-20px;
+  width:100px;height:100px;
+  border-radius:50%;
+  background:var(--green-light);
+  z-index:-1;
+}
+.about-content .section-tag{margin-bottom:18px;}
+.about-content h2{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;letter-spacing:-.025em;line-height:1.15;margin-bottom:18px;}
+.about-content h2 em{font-style:italic;color:var(--green);}
+.about-content p{font-size:.95rem;color:var(--muted);line-height:1.75;margin-bottom:14px;}
+.about-skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px;}
+.skill-chip{font-size:.78rem;font-weight:600;background:var(--green-light);color:var(--green);padding:5px 14px;border-radius:50px;}
+
+/* ─── CTA ─── */
+.cta{
+  margin:0 24px 80px;
+  background:linear-gradient(135deg,#0F0F0E 0%,#2A6049 100%);
+  border-radius:28px;padding:80px 52px;
+  text-align:center;color:#fff;
+}
+.cta h2{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:300;letter-spacing:-.03em;margin-bottom:18px;}
+.cta p{color:rgba(255,255,255,.55);font-size:1rem;margin-bottom:36px;}
+.btn-white{background:#fff;color:var(--ink);padding:14px 34px;border-radius:50px;font-size:.92rem;font-weight:700;text-decoration:none;display:inline-block;transition:.2s;box-shadow:0 4px 20px rgba(0,0,0,.2);}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.3);}
+
+/* ─── FOOTER ─── */
+footer{
+  padding:36px 52px;
+  border-top:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;
+}
+.footer-logo{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;}
+.footer-logo span{color:var(--green);}
+footer p{font-size:.78rem;color:var(--muted);}
+.footer-links{display:flex;gap:22px;}
+.footer-links a{font-size:.78rem;color:var(--muted);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--ink);}
+
+/* ─── SHARED ─── */
+.section-tag{display:inline-block;background:var(--tag);border:1px solid var(--line);border-radius:50px;padding:5px 14px;font-size:.75rem;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:none;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
+
+/* ─── COURSE DETAIL PAGE ─── */
+#course-page{
+  display:none;
+  position:fixed;inset:0;z-index:999;
+  background:var(--bg);
+  overflow-y:auto;
+  animation:slideIn .35s ease;
+}
+#course-page.open{display:block;}
+@keyframes slideIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:none;}}
+
+.cp-nav{
+  position:sticky;top:0;z-index:10;
+  background:rgba(245,244,240,0.92);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+  padding:16px 52px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.cp-back{
+  display:flex;align-items:center;gap:8px;
+  font-size:.875rem;font-weight:500;color:var(--muted);
+  cursor:pointer;border:none;background:none;transition:color .2s;
+}
+.cp-back:hover{color:var(--ink);}
+.cp-back svg{transition:transform .2s;}
+.cp-back:hover svg{transform:translateX(-3px);}
+.cp-nav-logo{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:600;}
+.cp-nav-logo span{color:var(--green);}
+.cp-nav-enroll{
+  background:var(--green);color:#fff;
+  padding:10px 22px;border-radius:50px;
+  font-size:.85rem;font-weight:600;border:none;cursor:pointer;
+  transition:opacity .2s;
+}
+.cp-nav-enroll:hover{opacity:.85;}
+
+/* hero */
+.cp-hero{
+  background:var(--ink);color:#fff;
+  padding:72px 52px 60px;
+  display:grid;grid-template-columns:1fr 420px;
+  gap:60px;align-items:start;
+}
+.cp-breadcrumb{
+  display:flex;align-items:center;gap:8px;
+  font-size:.75rem;color:rgba(255,255,255,.4);margin-bottom:20px;
+}
+.cp-breadcrumb span{color:rgba(255,255,255,.25);}
+.cp-hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(126,200,164,.15);color:#7EC8A4;
+  border:1px solid rgba(126,200,164,.25);
+  border-radius:50px;padding:5px 14px;
+  font-size:.72rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  margin-bottom:18px;
+}
+.cp-hero h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:300;letter-spacing:-.03em;line-height:1.1;
+  margin-bottom:18px;
+}
+.cp-hero h1 em{font-style:italic;color:#7EC8A4;}
+.cp-hero-desc{font-size:.975rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:28px;max-width:520px;}
+.cp-meta-row{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:28px;}
+.cp-meta-item{display:flex;align-items:center;gap:7px;font-size:.82rem;color:rgba(255,255,255,.5);}
+.cp-meta-item strong{color:#fff;font-weight:600;}
+.cp-stars{color:#F5C842;font-size:.85rem;letter-spacing:1px;}
+.cp-rating-count{font-size:.78rem;color:rgba(255,255,255,.4);}
+
+/* sticky card */
+.cp-card{
+  background:#fff;border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 24px 80px rgba(0,0,0,.25);
+  position:sticky;top:90px;
+}
+.cp-card-thumb{
+  height:200px;background:linear-gradient(135deg,#e8f4f0,#c8e6da);
+  display:flex;align-items:center;justify-content:center;
+  font-size:4rem;position:relative;
+}
+.cp-card-play{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.1);cursor:pointer;transition:.2s;
+}
+.cp-card-play:hover{background:rgba(0,0,0,.2);}
+.cp-play-btn{
+  width:54px;height:54px;border-radius:50%;
+  background:#fff;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(0,0,0,.2);
+  font-size:1.2rem;padding-left:4px;
+}
+.cp-card-body{padding:28px;}
+.cp-card-price{
+  font-family:'Fraunces',serif;
+  font-size:2.4rem;font-weight:300;letter-spacing:-.03em;color:var(--ink);
+  margin-bottom:4px;
+}
+.cp-card-price .orig{font-size:1rem;color:var(--muted);text-decoration:line-through;font-family:'DM Sans',sans-serif;margin-left:8px;}
+.cp-discount{display:inline-block;background:#FEF3CD;color:#92600A;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:50px;margin-bottom:20px;}
+.cp-enroll-btn{
+  display:block;width:100%;text-align:center;
+  background:var(--green);color:#fff;
+  padding:15px;border-radius:12px;
+  font-size:.95rem;font-weight:700;border:none;cursor:pointer;
+  transition:transform .2s,box-shadow .2s;
+  box-shadow:0 4px 16px rgba(42,96,73,.3);
+  margin-bottom:12px;
+}
+.cp-enroll-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(42,96,73,.4);}
+.cp-try-btn{
+  display:block;width:100%;text-align:center;
+  background:transparent;color:var(--ink);
+  padding:13px;border-radius:12px;
+  font-size:.875rem;font-weight:500;border:1.5px solid var(--line);cursor:pointer;
+  transition:.2s;margin-bottom:20px;
+}
+.cp-try-btn:hover{background:var(--tag);}
+.cp-includes{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.cp-includes li{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--muted);}
+.cp-includes li span:first-child{font-size:1rem;}
+
+/* content area */
+.cp-content{padding:60px 52px;max-width:780px;}
+.cp-section{margin-bottom:56px;}
+.cp-section-title{
+  font-family:'Fraunces',serif;
+  font-size:1.5rem;font-weight:400;letter-spacing:-.02em;
+  margin-bottom:24px;padding-bottom:14px;
+  border-bottom:1px solid var(--line);
+}
+
+/* what you learn */
+.learn-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.learn-item{display:flex;align-items:flex-start;gap:10px;font-size:.875rem;line-height:1.5;}
+.learn-item::before{content:'✓';color:var(--green);font-weight:700;font-size:1rem;flex-shrink:0;margin-top:1px;}
+
+/* curriculum */
+.curriculum{display:flex;flex-direction:column;gap:8px;}
+.module{border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+.module-header{
+  padding:16px 20px;background:var(--card);
+  display:flex;align-items:center;justify-content:space-between;
+  cursor:pointer;transition:background .2s;user-select:none;
+}
+.module-header:hover{background:var(--tag);}
+.module-header-left{display:flex;align-items:center;gap:12px;}
+.module-num{
+  width:28px;height:28px;border-radius:8px;
+  background:var(--green-light);color:var(--green);
+  font-size:.78rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.module-title{font-size:.9rem;font-weight:600;}
+.module-count{font-size:.75rem;color:var(--muted);}
+.module-arrow{font-size:.75rem;color:var(--muted);transition:transform .25s;}
+.module.open .module-arrow{transform:rotate(180deg);}
+.module-lessons{
+  display:none;
+  border-top:1px solid var(--line);
+}
+.module.open .module-lessons{display:block;}
+.lesson{
+  padding:13px 20px 13px 60px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--line);font-size:.85rem;
+}
+.lesson:last-child{border-bottom:none;}
+.lesson-left{display:flex;align-items:center;gap:10px;color:var(--muted);}
+.lesson-left span:first-child{font-size:1rem;}
+.lesson-duration{font-size:.75rem;color:var(--muted);}
+.lesson-free{font-size:.7rem;font-weight:700;color:var(--green);background:var(--green-light);padding:2px 8px;border-radius:50px;}
+
+/* instructor */
+.instructor-card{
+  display:flex;gap:24px;align-items:flex-start;
+  background:var(--card);border:1px solid var(--line);
+  border-radius:16px;padding:28px;
+}
+.instructor-avatar{
+  width:72px;height:72px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,#c8e0d8,#a8c8bc);
+  display:flex;align-items:center;justify-content:center;font-size:1.8rem;
+}
+.instructor-name{font-size:1.05rem;font-weight:600;margin-bottom:4px;}
+.instructor-title{font-size:.82rem;color:var(--green);font-weight:500;margin-bottom:10px;}
+.instructor-bio{font-size:.85rem;color:var(--muted);line-height:1.65;}
+.instructor-stats{display:flex;gap:20px;margin-top:14px;}
+.istat{font-size:.78rem;color:var(--muted);}
+.istat strong{display:block;font-size:.95rem;font-weight:600;color:var(--ink);}
+
+/* reviews */
+.reviews-summary{
+  display:flex;gap:32px;align-items:center;
+  background:var(--card);border:1px solid var(--line);
+  border-radius:16px;padding:28px;margin-bottom:24px;
+}
+.big-rating{text-align:center;}
+.big-rating-num{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:300;color:var(--green);line-height:1;}
+.big-rating-stars{color:#F5C842;font-size:1.1rem;margin:4px 0;}
+.big-rating-count{font-size:.75rem;color:var(--muted);}
+.rating-bars{flex:1;display:flex;flex-direction:column;gap:7px;}
+.rating-bar-row{display:flex;align-items:center;gap:10px;font-size:.78rem;color:var(--muted);}
+.bar-track{flex:1;height:6px;background:var(--tag);border-radius:3px;overflow:hidden;}
+.bar-fill{height:100%;background:#F5C842;border-radius:3px;}
+.review-cards{display:flex;flex-direction:column;gap:16px;}
+.review-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;}
+.review-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.reviewer{display:flex;align-items:center;gap:10px;}
+.reviewer-avatar{width:38px;height:38px;border-radius:50%;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-size:1rem;}
+.reviewer-name{font-size:.875rem;font-weight:600;}
+.reviewer-date{font-size:.72rem;color:var(--muted);}
+.review-stars{color:#F5C842;font-size:.82rem;}
+.review-text{font-size:.875rem;color:var(--muted);line-height:1.65;}
+
+@media(max-width:900px){
+  nav{padding:16px 20px;}
+  .nav-links{display:none;}
+  .hero{grid-template-columns:1fr;padding:110px 20px 60px;text-align:center;}
+  .hero-sub{margin:18px auto 0;}
+  .hero-actions{justify-content:center;}
+  .hero-right{justify-content:center;margin-top:40px;}
+  .photo-frame{width:280px;height:340px;}
+  .about{grid-template-columns:1fr;gap:40px;padding:70px 20px;}
+  .cat-section{padding:60px 20px 0;}
+  .cta{margin:0 12px 60px;padding:60px 20px;}
+  footer{padding:28px 20px;}
+  .learning-hero{padding:32px;}
+  .learning-stats{gap:20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+    <img src="logo.png" alt="Logo" style="height: 70px; width: auto; object-fit: contain;">
+    <div>Next<span>CareerStep</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services" onclick="switchTab('saas')">Services</a></li>
+    <li><a href="#learning" onclick="switchTab('learning')">Learning</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#services" class="nav-cta">Get Started →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-left">
+    <div class="hero-badge"><span class="dot"></span>Study in Germany · AI Education · Career Growth</div>
+    <h1>Your next step<br>starts <em>here</em></h1>
+    <p class="hero-sub">We empower students and professionals to build global careers — offering expert guidance for studying in Germany and world-class AI learning resources to help you stay ahead.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-dark" onclick="switchTab('saas')">Explore Services</a>
+      <a href="#learning" class="btn-outline" onclick="switchTab('learning')">Browse Courses →</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="photo-frame">
+      <div class="photo-shape"></div>
+      <!-- 🔁 Replace src with your actual photo path -->
+      <img src="ganesh-dada.png" alt="Ganesh Dada">
+      <div class="photo-tag">
+        <div class="photo-tag-icon">🚀</div>
+        <div class="photo-tag-text">
+          <strong>Founder & AI Builder</strong>
+          <span>Next Career Step</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY TABS -->
+<section class="cat-section" id="services">
+  <div class="section-tag" style="margin-bottom:28px;">What We Offer</div>
+  <div class="cat-tabs">
+    <button class="cat-tab active" onclick="switchTab('saas')">🇩🇪 Study in Germany Help</button>
+    <button class="cat-tab" onclick="switchTab('learning')" id="learning-tab">📚 AI Learning</button>
+  </div>
+
+  <!-- CAT 1: SaaS + AI + Agency -->
+  <div class="cat-content active" id="cat-saas">
+    <div class="services-grid reveal">
+      <div class="svc-card">
+        <div class="svc-icon">🎓</div>
+        <h3>University & Program Guidance</h3>
+        <p>Shortlist German universities based on your background, budget, and goals.</p>
+        <div class="svc-tags"><span class="svc-tag">Universities</span><span class="svc-tag">Shortlist</span><span class="svc-tag">Guidance</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">✍️</div>
+        <h3>SOP & Application Support</h3>
+        <p>Assistance in writing your Statement of Purpose, Letters of Recommendation, and preparing your application portfolio.</p>
+        <div class="svc-tags"><span class="svc-tag">SOP</span><span class="svc-tag">LOR</span><span class="svc-tag">Portfolio</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🛂</div>
+        <h3>Visa & Interview Prep</h3>
+        <p>Preparation of Visa documents and mock interview practice.</p>
+        <div class="svc-tags"><span class="svc-tag">Visa</span><span class="svc-tag">Interview</span><span class="svc-tag">Documents</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">💼</div>
+        <h3>Career & Job Search</h3>
+        <p>Guidance for student jobs, internships, and post-study job search.</p>
+        <div class="svc-tags"><span class="svc-tag">Jobs</span><span class="svc-tag">Internships</span><span class="svc-tag">Career</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">💰</div>
+        <h3>Scholarship Assistance</h3>
+        <p>Assistance in applying for scholarships like DAAD and Erasmus Mundus.</p>
+        <div class="svc-tags"><span class="svc-tag">DAAD</span><span class="svc-tag">Erasmus Mundus</span><span class="svc-tag">Scholarships</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🗣️</div>
+        <h3>Language Preparation</h3>
+        <p>Guidance for German (A1–B2) and IELTS/TOEFL preparation.</p>
+        <div class="svc-tags"><span class="svc-tag">German</span><span class="svc-tag">IELTS</span><span class="svc-tag">TOEFL</span></div>
+      </div>
+    </div>
+
+    <div class="germany-info reveal" style="margin-top: 40px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 36px 30px;">
+      <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; color: var(--green);">Fast Facts About Germany:</h3>
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+        <tr style="border-bottom: 1px solid var(--line);">
+          <td style="padding: 12px 0; font-weight: 600; width: 30%;">Universities</td>
+          <td style="padding: 12px 0; color: var(--muted);">400+ master's programs</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--line);">
+          <td style="padding: 12px 0; font-weight: 600;">Fees</td>
+          <td style="padding: 12px 0; color: var(--muted);">€0–500 per semester (Almost free in public universities!)</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--line);">
+          <td style="padding: 12px 0; font-weight: 600;">Post-study visa</td>
+          <td style="padding: 12px 0; color: var(--muted);">18 months post-study job seeker visa</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--line);">
+          <td style="padding: 12px 0; font-weight: 600;">English programs</td>
+          <td style="padding: 12px 0; color: var(--muted);">1000+ English-taught master's</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px 0; font-weight: 600;">Schengen access</td>
+          <td style="padding: 12px 0; color: var(--muted);">26 countries accessible</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- CAT 2: Learning -->
+  <div class="cat-content" id="cat-learning" id="learning">
+    <div class="learning-hero reveal">
+      <div>
+        <h2>Learn <em>AI</em> the right way</h2>
+        <p>Structured courses, video lectures, PDF guides and hands-on projects — everything to make you job-ready in GenAI and ML.</p>
+      </div>
+      <div class="learning-stats">
+        <div><div class="lstat-num">12+</div><div class="lstat-label">Courses</div></div>
+        <div><div class="lstat-num">50+</div><div class="lstat-label">Video Lessons</div></div>
+        <div><div class="lstat-num">30+</div><div class="lstat-label">PDF Resources</div></div>
+      </div>
+    </div>
+    <div class="learning-grid reveal">
+
+      <div class="course-card">
+        <div class="course-thumb c1">
+          🧠
+          <span class="course-badge badge-course">Course</span>
+        </div>
+        <div class="course-body">
+          <div class="course-meta"><span>Machine Learning</span><span class="dot-sep"></span><span>Beginner</span></div>
+          <h3>ML Fundamentals: From Zero to Model</h3>
+          <p>Supervised, unsupervised learning, regression, classification — the complete foundation for any AI career.</p>
+          <div class="course-footer">
+            <div class="course-price">₹499</div>
+            <a href="#" class="course-btn" onclick="event.preventDefault()">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-thumb c2">
+          🎬
+          <span class="course-badge badge-video">Video</span>
+        </div>
+        <div class="course-body">
+          <div class="course-meta"><span>Deep Learning</span><span class="dot-sep"></span><span>Intermediate</span></div>
+          <h3>Neural Networks & Deep Learning Crash Course</h3>
+          <p>ANNs, CNNs, RNNs explained with visual walkthroughs. Build real models from scratch in Python.</p>
+          <div class="course-footer">
+            <div class="course-price free">Free</div>
+            <a href="#" class="course-btn">Watch Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-thumb c3">
+          📄
+          <span class="course-badge badge-pdf">PDF</span>
+        </div>
+        <div class="course-body">
+          <div class="course-meta"><span>GenAI</span><span class="dot-sep"></span><span>All Levels</span></div>
+          <h3>GenAI Roadmap — 12-Week Sprint Guide</h3>
+          <p>Week-by-week structured plan to go from ML basics to LangChain, RAG, and deployment in 3 months.</p>
+          <div class="course-footer">
+            <div class="course-price free">Free Download</div>
+            <a href="#" class="course-btn">Download PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-thumb c4">
+          🔗
+          <span class="course-badge badge-course">Course</span>
+        </div>
+        <div class="course-body">
+          <div class="course-meta"><span>LangChain · RAG</span><span class="dot-sep"></span><span>Advanced</span></div>
+          <h3>Build RAG Apps with LangChain & Vector DBs</h3>
+          <p>Build production-grade retrieval systems, PDF chatbots, and AI agents using LangChain, FAISS, and Pinecone.</p>
+          <div class="course-footer">
+            <div class="course-price">₹999</div>
+            <a href="#" class="course-btn" onclick="event.preventDefault();openCourse()">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-thumb c5">
+          🎬
+          <span class="course-badge badge-video">Video</span>
+        </div>
+        <div class="course-body">
+          <div class="course-meta"><span>NLP</span><span class="dot-sep"></span><span>Intermediate</span></div>
+          <h3>NLP & Transformers: BERT to GPT Explained</h3>
+          <p>Tokenization, attention mechanisms, fine-tuning — understand how modern LLMs actually work under the hood.</p>
+          <div class="course-footer">
+            <div class="course-price free">Free</div>
+            <a href="#" class="course-btn">Watch Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-thumb c6">
+          📄
+          <span class="course-badge badge-pdf">PDF</span>
+        </div>
+        <div class="course-body">
+          <div class="course-meta"><span>Interview Prep</span><span class="dot-sep"></span><span>All Levels</span></div>
+          <h3>Top 100 AI/ML Interview Questions & Answers</h3>
+          <p>Curated question bank covering ML concepts, coding rounds, system design, and GenAI — for FAANG and startups.</p>
+          <div class="course-footer">
+            <div class="course-price">₹199</div>
+            <a href="#" class="course-btn">Download PDF</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-photo-wrap reveal">
+    <div class="about-photo-frame">
+      <!-- 🔁 Replace src with your actual photo path -->
+      <img src="ganesh-dada.png" alt="Ganesh Dada">
+    </div>
+    <div class="about-accent"></div>
+  </div>
+  <div class="about-content reveal">
+    <div class="section-tag">About the Founder</div>
+    <h2>Building the future<br>of <em>AI careers</em></h2>
+    <p>Hi, I'm the founder of Next Career Step — a platform born from my own journey into AI and GenAI. I built this to help students and professionals skip the confusion and learn what actually matters in the industry.</p>
+    <p>We combine real SaaS products, AI consulting services, and structured learning — so whether you want to build, hire, or upskill, we've got you covered.</p>
+    <div class="about-skills">
+      <span class="skill-chip">Python</span>
+      <span class="skill-chip">LangChain</span>
+      <span class="skill-chip">RAG</span>
+      <span class="skill-chip">LLMs</span>
+      <span class="skill-chip">FastAPI</span>
+      <span class="skill-chip">GenAI</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta reveal">
+  <h2>Ready to take your next step?</h2>
+  <p>Whether you want to build with AI or learn it — we're here for both.</p>
+  <a href="#services" class="btn-white">Get Started Today →</a>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" style="padding: 20px 52px 100px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto;">
+  <div class="contact-info reveal">
+    <div class="section-tag">Get in Touch</div>
+    <h2 style="font-family:'Fraunces',serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 300; margin-top: 20px; margin-bottom: 20px; line-height: 1.1;">Book a <em>Free Consultation</em></h2>
+    <p style="color: var(--muted); line-height: 1.7; margin-bottom: 30px;">We offer a free consultation! Fill out the form to book yours, or reach out to us directly through any of the channels below.</p>
+    
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      <div style="display: flex; align-items: center; gap: 18px;">
+        <div style="width: 50px; height: 50px; background: var(--green-light); color: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">📧</div>
+        <div>
+          <strong style="display: block; font-size: 0.9rem; margin-bottom: 4px;">Email</strong>
+          <a href="mailto:vivekvanave@nextcareersteps.in" style="color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500;">vivekvanave@nextcareersteps.in</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 18px;">
+        <div style="width: 50px; height: 50px; background: var(--green-light); color: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">📱</div>
+        <div>
+          <strong style="display: block; font-size: 0.9rem; margin-bottom: 4px;">Call</strong>
+          <a href="tel:+918605205226" style="color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500;">+91 86052 05226</a>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 18px;">
+        <div style="width: 50px; height: 50px; background: var(--green-light); color: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">💬</div>
+        <div>
+          <strong style="display: block; font-size: 0.9rem; margin-bottom: 4px;">WhatsApp</strong>
+          <a href="https://wa.me/919689908757" target="_blank" style="color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500;">+91 96899 08757</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form reveal" style="background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 40px; box-shadow: 0 16px 40px rgba(15,15,14,0.06);">
+    <form onsubmit="sendWhatsApp(event)" style="display: flex; flex-direction: column; gap: 20px;">
+      <div>
+        <label for="wa-name" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Name</label>
+        <input type="text" id="wa-name" required placeholder="Your Name" style="width: 100%; padding: 14px 18px; border: 1.5px solid var(--line); border-radius: 12px; font-family: inherit; font-size: 0.9rem; outline: none; transition: border 0.2s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--line)'">
+      </div>
+      <div>
+        <label for="wa-phone" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Phone Number</label>
+        <input type="tel" id="wa-phone" required placeholder="+91 00000 00000" style="width: 100%; padding: 14px 18px; border: 1.5px solid var(--line); border-radius: 12px; font-family: inherit; font-size: 0.9rem; outline: none; transition: border 0.2s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--line)'">
+      </div>
+      <div>
+        <label for="wa-message" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Message / Inquiry</label>
+        <textarea id="wa-message" rows="4" required placeholder="How can we help you?" style="width: 100%; padding: 14px 18px; border: 1.5px solid var(--line); border-radius: 12px; font-family: inherit; font-size: 0.9rem; outline: none; resize: vertical; transition: border 0.2s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--line)'"></textarea>
+      </div>
+      <button type="submit" class="btn-dark" style="width: 100%; margin-top: 10px; cursor: pointer; border: none; padding: 16px; font-size: 1rem;">Book Consultation via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<script>
+function sendWhatsApp(e) {
+  e.preventDefault();
+  const name = document.getElementById('wa-name').value;
+  const phone = document.getElementById('wa-phone').value;
+  const msg = document.getElementById('wa-message').value;
+  
+  const text = `Hello! I would like to book a free consultation.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Message:* ${msg}`;
+  const whatsappUrl = `https://wa.me/919689908757?text=${text}`;
+  
+  window.open(whatsappUrl, '_blank');
+}
+</script>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--           COURSE DETAIL PAGE              -->
+<!-- ═══════════════════════════════════════════ -->
+<div id="course-page">
+
+  <!-- sticky top nav -->
+  <div class="cp-nav">
+    <button class="cp-back" onclick="closeCourse()">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Back to Courses
+    </button>
+    <div class="cp-nav-logo" style="display: flex; align-items: center; gap: 10px;">
+      <img src="logo.png" alt="Logo" style="height: 70px; width: auto; object-fit: contain;">
+      <div>Next<span>CareerStep</span></div>
+    </div>
+    <button class="cp-nav-enroll" onclick="alert('Enrollment coming soon! 🚀')">Enroll — ₹999</button>
+  </div>
+
+  <!-- hero banner -->
+  <div class="cp-hero">
+    <div class="cp-hero-left">
+      <div class="cp-breadcrumb">AI Learning <span>›</span> LangChain & RAG <span>›</span> Advanced</div>
+      <div class="cp-hero-badge">🔗 Advanced Course</div>
+      <h1>Build RAG Apps with<br><em>LangChain</em> & Vector DBs</h1>
+      <p class="cp-hero-desc">Master production-grade retrieval systems, PDF chatbots, and AI agents. Go from zero to deploying real GenAI apps using LangChain, FAISS, Pinecone, and OpenAI APIs.</p>
+      <div class="cp-meta-row">
+        <div class="cp-meta-item"><span class="cp-stars">★★★★★</span> <strong>4.9</strong> <span class="cp-rating-count">(312 ratings)</span></div>
+        <div class="cp-meta-item">👥 <strong>1,840+</strong> students</div>
+        <div class="cp-meta-item">🕐 <strong>18 hours</strong> content</div>
+        <div class="cp-meta-item">📅 Updated <strong>May 2026</strong></div>
+      </div>
+      <div class="cp-meta-row">
+        <div class="cp-meta-item">🌐 English + Hindi subtitles</div>
+        <div class="cp-meta-item">📱 Mobile & Desktop access</div>
+        <div class="cp-meta-item">🏅 Certificate of completion</div>
+      </div>
+    </div>
+
+    <!-- sticky enroll card -->
+    <div class="cp-card">
+      <div class="cp-card-thumb">
+        🔗
+        <div class="cp-card-play">
+          <div class="cp-play-btn">▶</div>
+        </div>
+      </div>
+      <div class="cp-card-body">
+        <div class="cp-card-price">₹999 <span class="orig">₹2,499</span></div>
+        <div class="cp-discount">60% OFF — Limited Time</div>
+        <button class="cp-enroll-btn" onclick="alert('Enrollment coming soon! 🚀')">Enroll Now</button>
+        <button class="cp-try-btn">Try Free Preview</button>
+        <ul class="cp-includes">
+          <li><span>🎬</span><span>18 hours on-demand video</span></li>
+          <li><span>📄</span><span>12 downloadable PDF resources</span></li>
+          <li><span>💻</span><span>8 hands-on coding projects</span></li>
+          <li><span>🏅</span><span>Certificate of completion</span></li>
+          <li><span>♾️</span><span>Lifetime access</span></li>
+          <li><span>📱</span><span>Access on mobile & desktop</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- main content -->
+  <div style="display:grid;grid-template-columns:1fr 420px;gap:0;max-width:1280px;margin:0 auto;padding:0 52px;">
+  <div class="cp-content">
+
+    <!-- What you'll learn -->
+    <div class="cp-section">
+      <div class="cp-section-title">What you'll learn</div>
+      <div class="learn-grid">
+        <div class="learn-item">Build end-to-end RAG pipelines from scratch</div>
+        <div class="learn-item">Integrate LangChain with OpenAI, Ollama & Gemini</div>
+        <div class="learn-item">Create PDF chatbots with FAISS & Pinecone</div>
+        <div class="learn-item">Design and deploy AI agents with tool use</div>
+        <div class="learn-item">Use vector embeddings for semantic search</div>
+        <div class="learn-item">Build memory-enabled conversational AI</div>
+        <div class="learn-item">Deploy apps on Streamlit, FastAPI & Vercel</div>
+        <div class="learn-item">Handle chunking, retrieval, and reranking</div>
+      </div>
+    </div>
+
+    <!-- Curriculum -->
+    <div class="cp-section">
+      <div class="cp-section-title">Course Curriculum</div>
+      <p style="font-size:.85rem;color:var(--muted);margin-bottom:20px;">8 modules · 42 lessons · 18 hours total</p>
+      <div class="curriculum">
+
+        <div class="module open">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div class="module-header-left">
+              <div class="module-num">1</div>
+              <div>
+                <div class="module-title">Introduction to RAG & LangChain</div>
+                <div class="module-count">6 lessons · 2h 10min</div>
+              </div>
+            </div>
+            <span class="module-arrow">▼</span>
+          </div>
+          <div class="module-lessons">
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>What is RAG? Architecture Overview</span><span class="lesson-free">Free</span></div><span class="lesson-duration">18 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>LangChain Setup & Environment</span><span class="lesson-free">Free</span></div><span class="lesson-duration">22 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>OpenAI API Integration</span></div><span class="lesson-duration">25 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>📄</span><span>RAG Cheatsheet PDF</span></div><span class="lesson-duration">Resource</span></div>
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>Your First RAG Pipeline</span></div><span class="lesson-duration">34 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>💻</span><span>Project: Simple Q&A Bot</span></div><span class="lesson-duration">30 min</span></div>
+          </div>
+        </div>
+
+        <div class="module">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div class="module-header-left">
+              <div class="module-num">2</div>
+              <div>
+                <div class="module-title">Vector Databases — FAISS & Pinecone</div>
+                <div class="module-count">5 lessons · 2h 40min</div>
+              </div>
+            </div>
+            <span class="module-arrow">▼</span>
+          </div>
+          <div class="module-lessons">
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>Vector Embeddings Explained</span></div><span class="lesson-duration">28 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>FAISS Setup & Indexing</span></div><span class="lesson-duration">35 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>Pinecone Cloud Integration</span></div><span class="lesson-duration">30 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>💻</span><span>Project: Semantic Search Engine</span></div><span class="lesson-duration">45 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>📄</span><span>Vector DB Comparison Guide</span></div><span class="lesson-duration">Resource</span></div>
+          </div>
+        </div>
+
+        <div class="module">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div class="module-header-left">
+              <div class="module-num">3</div>
+              <div>
+                <div class="module-title">PDF Chatbot — Full Build</div>
+                <div class="module-count">6 lessons · 3h 20min</div>
+              </div>
+            </div>
+            <span class="module-arrow">▼</span>
+          </div>
+          <div class="module-lessons">
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>PDF Parsing & Chunking Strategies</span></div><span class="lesson-duration">30 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>Building the Retrieval Chain</span></div><span class="lesson-duration">40 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>Streamlit UI for Chatbot</span></div><span class="lesson-duration">35 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>Multi-PDF Support</span></div><span class="lesson-duration">28 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>💻</span><span>Project: Deploy PDF Chatbot</span></div><span class="lesson-duration">45 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>📄</span><span>Source Code & Notebook</span></div><span class="lesson-duration">Resource</span></div>
+          </div>
+        </div>
+
+        <div class="module">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div class="module-header-left">
+              <div class="module-num">4</div>
+              <div>
+                <div class="module-title">AI Agents with Tool Use</div>
+                <div class="module-count">5 lessons · 2h 50min</div>
+              </div>
+            </div>
+            <span class="module-arrow">▼</span>
+          </div>
+          <div class="module-lessons">
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>What are AI Agents?</span></div><span class="lesson-duration">20 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>LangChain Agents & Tools</span></div><span class="lesson-duration">40 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>ReAct Framework in Practice</span></div><span class="lesson-duration">35 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>💻</span><span>Project: Research Agent</span></div><span class="lesson-duration">55 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>📄</span><span>Agent Patterns Reference PDF</span></div><span class="lesson-duration">Resource</span></div>
+          </div>
+        </div>
+
+        <div class="module">
+          <div class="module-header" onclick="toggleModule(this)">
+            <div class="module-header-left">
+              <div class="module-num">5–8</div>
+              <div>
+                <div class="module-title">Memory, Deployment, Advanced Topics + Capstone</div>
+                <div class="module-count">20 lessons · 7h</div>
+              </div>
+            </div>
+            <span class="module-arrow">▼</span>
+          </div>
+          <div class="module-lessons">
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>Conversation Memory with LangChain</span></div><span class="lesson-duration">32 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>FastAPI Backend for AI Apps</span></div><span class="lesson-duration">45 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>🎬</span><span>Deploy to Vercel & HuggingFace Spaces</span></div><span class="lesson-duration">30 min</span></div>
+            <div class="lesson"><div class="lesson-left"><span>💻</span><span>Capstone: Full-Stack AI SaaS App</span></div><span class="lesson-duration">2h</span></div>
+            <div class="lesson" style="color:var(--muted);font-size:.82rem;padding:12px 20px 12px 60px;">+ 16 more lessons included...</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Instructor -->
+    <div class="cp-section">
+      <div class="cp-section-title">Your Instructor</div>
+      <div class="instructor-card">
+        <div class="instructor-avatar">🧑‍💻</div>
+        <div>
+          <div class="instructor-name">Samarth (Founder, Next Career Step)</div>
+          <div class="instructor-title">AI/ML Engineer · GenAI Builder · Educator</div>
+          <div class="instructor-bio">I've spent years building real-world AI products — from RAG systems to LLM-powered SaaS apps. I created this course to give you the exact roadmap I wish I had when I started. No fluff, just practical skills you can use from day one.</div>
+          <div class="instructor-stats">
+            <div class="istat"><strong>4.9 ★</strong>Avg Rating</div>
+            <div class="istat"><strong>5,200+</strong>Students</div>
+            <div class="istat"><strong>8</strong>Courses</div>
+            <div class="istat"><strong>3 yrs</strong>Teaching</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews -->
+    <div class="cp-section">
+      <div class="cp-section-title">Student Reviews</div>
+      <div class="reviews-summary">
+        <div class="big-rating">
+          <div class="big-rating-num">4.9</div>
+          <div class="big-rating-stars">★★★★★</div>
+          <div class="big-rating-count">312 reviews</div>
+        </div>
+        <div class="rating-bars">
+          <div class="rating-bar-row">5 ★<div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>88%</div>
+          <div class="rating-bar-row">4 ★<div class="bar-track"><div class="bar-fill" style="width:9%"></div></div>9%</div>
+          <div class="rating-bar-row">3 ★<div class="bar-track"><div class="bar-fill" style="width:2%"></div></div>2%</div>
+          <div class="rating-bar-row">2 ★<div class="bar-track"><div class="bar-fill" style="width:1%"></div></div>1%</div>
+          <div class="rating-bar-row">1 ★<div class="bar-track"><div class="bar-fill" style="width:0%"></div></div>0%</div>
+        </div>
+      </div>
+      <div class="review-cards">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer"><div class="reviewer-avatar">👨</div><div><div class="reviewer-name">Rohit Sharma</div><div class="reviewer-date">May 2026</div></div></div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <div class="review-text">This course is exactly what I needed! Built my first RAG chatbot in Week 2. The PDF chatbot project helped me crack my GenAI internship interview. Highly recommended for anyone serious about LLMs.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer"><div class="reviewer-avatar">👩</div><div><div class="reviewer-name">Priya Nair</div><div class="reviewer-date">April 2026</div></div></div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <div class="review-text">Coming from a non-CS background, I was scared. But the explanations are crystal clear and the projects are practical. Deployed my first AI app in 3 weeks. Worth every rupee!</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer"><div class="reviewer-avatar">🧑</div><div><div class="reviewer-name">Arjun Mehta</div><div class="reviewer-date">April 2026</div></div></div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <div class="review-text">Best GenAI course in India right now. No filler content, straight to the point. The capstone project alone is portfolio-worthy. Got 2 interview calls after sharing my GitHub.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div></div><!-- spacer for grid -->
+  </div>
+
+</div><!-- end #course-page -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo" style="display: flex; align-items: center; gap: 8px;">
+    <img src="logo.png" alt="Logo" style="height: 50px; width: auto; object-fit: contain;">
+    <div>Next<span>CareerStep</span></div>
+  </div>
+  <p>© 2026 Next Career Step. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="#">Privacy</a>
+    <a href="#">Courses</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<script>
+function switchTab(cat){
+  document.querySelectorAll('.cat-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.cat-content').forEach(c=>c.classList.remove('active'));
+  document.getElementById('cat-'+cat).classList.add('active');
+  const tabBtn = document.querySelector(`button.cat-tab[onclick*="'${cat}'"]`);
+  if(tabBtn) tabBtn.classList.add('active');
+}
+function openCourse(){
+  const cp=document.getElementById('course-page');
+  cp.classList.add('open');
+  cp.scrollTop=0;
+  document.body.style.overflow='hidden';
+}
+function closeCourse(){
+  document.getElementById('course-page').classList.remove('open');
+  document.body.style.overflow='';
+}
+function toggleModule(header){
+  const module=header.parentElement;
+  module.classList.toggle('open');
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
