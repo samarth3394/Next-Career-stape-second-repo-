@@ -405,8 +405,8 @@ nav{
 /* ─── ABOUT ─── */
 .about{
   padding:100px 52px;
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:80px;align-items:center;
+  max-width:960px;
+  margin:0 auto;
 }
 .about-photo-wrap{position:relative;}
 .about-photo-frame{
@@ -721,7 +721,7 @@ footer p{font-size:.78rem;color:var(--muted);}
   .hero-actions{justify-content:center;}
   .hero-right{justify-content:center;margin-top:40px;}
   .photo-frame{width:280px;height:340px;}
-  .about{grid-template-columns:1fr;gap:40px;padding:70px 20px;}
+  .about{padding:70px 20px;}
   .cat-section{padding:60px 20px 0;}
   .contact { padding: 40px 20px 60px !important; gap: 40px !important; grid-template-columns: 1fr !important; }
   .contact-form { padding: 24px !important; border-radius: 16px !important; }
@@ -1389,12 +1389,6 @@ footer p{font-size:.78rem;color:var(--muted);}
 <!--        ABOUT SECTION                                    -->
 <!-- ═══════════════════════════════════════════════════════ -->
 <section class="about" id="about">
-  <div class="about-photo-wrap reveal">
-    <div class="about-photo-frame">
-      <img src="ganesh-dada.png" alt="Founder">
-    </div>
-    <div class="about-accent"></div>
-  </div>
   <div class="about-content reveal">
     <div class="section-tag">About Us</div>
     <h2>Helping Indian students<br>achieve their <em>German dream</em></h2>
