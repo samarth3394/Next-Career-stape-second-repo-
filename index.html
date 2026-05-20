@@ -40,6 +40,7 @@ nav{
   background:var(--ink);color:#fff;
   padding:10px 22px;border-radius:50px;
   text-decoration:none;transition:opacity .2s;
+  white-space:nowrap;
 }
 .nav-cta:hover{opacity:.8;}
 
@@ -521,6 +522,8 @@ footer p{font-size:.78rem;color:var(--muted);}
 @media(max-width:900px){
   nav{padding:16px 20px;}
   .nav-links{display:none;}
+  .logo img { height: 40px !important; }
+  .nav-cta { padding: 10px 16px; font-size: 0.8rem; }
   .hero{grid-template-columns:1fr;padding:110px 20px 60px;text-align:center;}
   .hero-sub{margin:18px auto 0;}
   .hero-actions{justify-content:center;}
@@ -528,6 +531,8 @@ footer p{font-size:.78rem;color:var(--muted);}
   .photo-frame{width:280px;height:340px;}
   .about{grid-template-columns:1fr;gap:40px;padding:70px 20px;}
   .cat-section{padding:60px 20px 0;}
+  .contact { padding: 40px 20px 60px !important; gap: 40px !important; grid-template-columns: 1fr !important; }
+  .contact-form { padding: 24px !important; border-radius: 16px !important; }
   .cta{margin:0 12px 60px;padding:60px 20px;}
   footer{padding:28px 20px;}
   .learning-hero{padding:32px;}
