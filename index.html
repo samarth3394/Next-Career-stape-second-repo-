@@ -731,10 +731,10 @@ footer p{font-size:.78rem;color:var(--muted);}
   .learning-stats{gap:20px;}
   .why-grid{grid-template-columns:1fr;}
   .how-steps{grid-template-columns:1fr 1fr;}
-  .germany-page-section{padding:60px 20px;}
-  .detailed-services{padding:60px 20px;}
+  .germany-page-section{padding:40px 20px;}
+  .detailed-services{padding:40px 20px;}
   .detailed-svc{grid-template-columns:1fr;gap:16px;}
-  .full-faq{padding:20px 20px 50px;}
+  .full-faq{padding:20px 20px 40px;}
   .mv-grid{grid-template-columns:1fr;}
   .city-grid{grid-template-columns:1fr 1fr;}
   .info-block{padding:24px 20px;}
@@ -1966,7 +1966,7 @@ function toggleFaq(q){
 }
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
-},{threshold:.1});
+});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 </body>
