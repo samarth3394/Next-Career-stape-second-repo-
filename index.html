@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Next Career Step</title>
+<title>Next Career Step — Study in Germany & AI Education for Indian Students</title>
+<meta name="description" content="Next Career Step helps Indian students pursue Masters in Germany with expert guidance on university selection, SOP preparation, visa support, and more. Plus world-class AI learning resources."/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -152,7 +153,7 @@ nav{
 .cat-content{display:none;}
 .cat-content.active{display:block;}
 
-/* ─── SERVICES (Cat 1) ─── */
+/* ─── SERVICES GRID ─── */
 .services-grid{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:20px;
@@ -175,6 +176,171 @@ nav{
 .svc-card p{font-size:.875rem;color:var(--muted);line-height:1.65;margin-bottom:18px;}
 .svc-tags{display:flex;gap:6px;flex-wrap:wrap;}
 .svc-tag{font-size:.72rem;font-weight:600;background:var(--tag);color:var(--muted);padding:3px 10px;border-radius:50px;letter-spacing:.03em;}
+
+/* ─── WHY GERMANY SECTION ─── */
+.why-germany{margin-top:60px;}
+.why-germany-title{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  font-weight:300;letter-spacing:-.025em;
+  margin-bottom:12px;
+}
+.why-germany-title em{font-style:italic;color:var(--green);}
+.why-germany-subtitle{font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:36px;max-width:600px;}
+.why-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:20px;
+}
+.why-card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:32px 28px;
+  transition:transform .25s,box-shadow .25s;
+  position:relative;
+}
+.why-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(15,15,14,.07);}
+.why-card-num{
+  position:absolute;top:20px;right:22px;
+  font-family:'Fraunces',serif;font-size:2.2rem;
+  font-weight:300;color:var(--green-light);line-height:1;
+}
+.why-card-icon{font-size:1.6rem;margin-bottom:14px;}
+.why-card h4{font-size:1rem;font-weight:600;margin-bottom:8px;}
+.why-card p{font-size:.85rem;color:var(--muted);line-height:1.65;}
+
+/* ─── HOW IT WORKS ─── */
+.how-section{margin-top:60px;}
+.how-title{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  font-weight:300;letter-spacing:-.025em;
+  margin-bottom:12px;
+}
+.how-title em{font-style:italic;color:var(--green);}
+.how-subtitle{font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:36px;}
+.how-steps{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.how-step{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:32px 26px;
+  text-align:center;position:relative;
+  transition:transform .25s,box-shadow .25s;
+}
+.how-step:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(15,15,14,.07);}
+.step-num{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--green);color:#fff;
+  font-family:'Fraunces',serif;font-size:1.2rem;font-weight:600;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 16px;
+}
+.how-step h4{font-size:1rem;font-weight:600;margin-bottom:8px;}
+.how-step p{font-size:.85rem;color:var(--muted);line-height:1.6;}
+
+/* ─── FAQ SECTION ─── */
+.faq-section{margin-top:60px;}
+.faq-title{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  font-weight:300;letter-spacing:-.025em;
+  margin-bottom:12px;
+}
+.faq-title em{font-style:italic;color:var(--green);}
+.faq-subtitle{font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:36px;}
+.faq-list{display:flex;flex-direction:column;gap:10px;}
+.faq-item{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:14px;overflow:hidden;
+  transition:box-shadow .2s;
+}
+.faq-item:hover{box-shadow:0 4px 20px rgba(15,15,14,.05);}
+.faq-q{
+  padding:20px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  cursor:pointer;font-size:.925rem;font-weight:600;
+  user-select:none;transition:background .2s;gap:12px;
+}
+.faq-q:hover{background:var(--tag);}
+.faq-arrow{font-size:.75rem;color:var(--muted);transition:transform .25s;flex-shrink:0;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-a{
+  display:none;padding:0 24px 20px;
+  font-size:.875rem;color:var(--muted);line-height:1.7;
+}
+.faq-item.open .faq-a{display:block;}
+
+/* ─── GERMANY INFO SECTION ─── */
+.germany-page-section{padding:80px 52px;}
+.germany-page-title{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.8rem,3.5vw,2.8rem);
+  font-weight:300;letter-spacing:-.025em;
+  margin-bottom:12px;
+}
+.germany-page-title em{font-style:italic;color:var(--green);}
+.germany-page-sub{font-size:1rem;color:var(--muted);line-height:1.7;margin-bottom:48px;max-width:680px;}
+.info-block{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:36px 32px;
+  margin-bottom:24px;
+  transition:box-shadow .25s;
+}
+.info-block:hover{box-shadow:0 8px 32px rgba(15,15,14,.06);}
+.info-block h3{
+  font-size:1.15rem;font-weight:600;margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.info-block h3 .info-icon{font-size:1.3rem;}
+.info-block p,.info-block li{font-size:.9rem;color:var(--muted);line-height:1.75;}
+.info-block ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;}
+.info-block ul li{padding-left:20px;position:relative;}
+.info-block ul li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700;}
+.info-block .info-sub{font-size:.95rem;font-weight:600;color:var(--ink);margin:18px 0 10px;}
+
+/* city cards */
+.city-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px;}
+.city-card{
+  background:var(--green-light);border-radius:12px;padding:20px;
+  text-align:center;transition:transform .2s;
+}
+.city-card:hover{transform:translateY(-2px);}
+.city-card h4{font-size:.95rem;font-weight:600;margin-bottom:4px;color:var(--green);}
+.city-card p{font-size:.8rem;color:var(--muted);}
+
+/* ─── DETAILED SERVICES PAGE ─── */
+.detailed-services{padding:80px 52px;}
+.detailed-svc{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:40px 36px;
+  margin-bottom:24px;
+  display:grid;grid-template-columns:auto 1fr;gap:28px;
+  align-items:start;
+  transition:box-shadow .25s;
+}
+.detailed-svc:hover{box-shadow:0 12px 40px rgba(15,15,14,.07);}
+.dsvc-icon{
+  width:60px;height:60px;border-radius:16px;
+  background:var(--green-light);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;flex-shrink:0;
+}
+.dsvc-content h3{font-size:1.2rem;font-weight:600;margin-bottom:10px;}
+.dsvc-content>p{font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:16px;}
+.dsvc-content .dsvc-sub{font-size:.88rem;font-weight:600;color:var(--green);margin:16px 0 8px;text-transform:uppercase;letter-spacing:.04em;}
+.dsvc-content ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;}
+.dsvc-content ul li{font-size:.875rem;color:var(--muted);line-height:1.6;padding-left:18px;position:relative;}
+.dsvc-content ul li::before{content:'•';position:absolute;left:0;color:var(--green);font-weight:700;}
+.dsvc-who{
+  margin-top:16px;padding:14px 18px;
+  background:var(--green-light);border-radius:10px;
+  font-size:.85rem;color:var(--green);line-height:1.6;
+}
+.dsvc-who strong{display:block;margin-bottom:4px;color:var(--ink);}
+
+/* ─── FULL FAQ PAGE ─── */
+.full-faq{padding:80px 52px;}
+.full-faq .faq-list{max-width:860px;}
 
 /* ─── LEARNING (Cat 2) ─── */
 .learning-hero{
@@ -271,6 +437,20 @@ nav{
 .about-skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px;}
 .skill-chip{font-size:.78rem;font-weight:600;background:var(--green-light);color:var(--green);padding:5px 14px;border-radius:50px;}
 
+/* mission vision cards */
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;}
+.mv-card{background:var(--green-light);border-radius:14px;padding:22px;transition:transform .2s;}
+.mv-card:hover{transform:translateY(-2px);}
+.mv-card h4{font-size:.92rem;font-weight:600;color:var(--green);margin-bottom:6px;}
+.mv-card p{font-size:.82rem;color:var(--muted);line-height:1.6;}
+
+/* why choose us */
+.wcu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:24px;}
+.wcu-item{display:flex;align-items:flex-start;gap:10px;}
+.wcu-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px;}
+.wcu-item h5{font-size:.88rem;font-weight:600;margin-bottom:3px;}
+.wcu-item p{font-size:.8rem;color:var(--muted);line-height:1.55;}
+
 /* ─── CTA ─── */
 .cta{
   margin:0 24px 80px;
@@ -302,6 +482,18 @@ footer p{font-size:.78rem;color:var(--muted);}
 .reveal.visible{opacity:1;transform:none;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
+
+/* ─── PAGE NAV (internal pages) ─── */
+.page-nav{
+  display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;
+}
+.page-nav-btn{
+  padding:9px 20px;border-radius:50px;
+  font-size:.82rem;font-weight:500;cursor:pointer;
+  border:1.5px solid var(--line);background:transparent;color:var(--muted);
+  transition:.2s;text-decoration:none;
+}
+.page-nav-btn:hover,.page-nav-btn.active{background:var(--green);color:#fff;border-color:var(--green);}
 
 /* ─── COURSE DETAIL PAGE ─── */
 #course-page{
@@ -537,6 +729,24 @@ footer p{font-size:.78rem;color:var(--muted);}
   footer{padding:28px 20px;}
   .learning-hero{padding:32px;}
   .learning-stats{gap:20px;}
+  .why-grid{grid-template-columns:1fr;}
+  .how-steps{grid-template-columns:1fr 1fr;}
+  .germany-page-section{padding:60px 20px;}
+  .detailed-services{padding:60px 20px;}
+  .detailed-svc{grid-template-columns:1fr;gap:16px;}
+  .full-faq{padding:60px 20px;}
+  .mv-grid{grid-template-columns:1fr;}
+  .city-grid{grid-template-columns:1fr 1fr;}
+  .info-block{padding:24px 20px;}
+  .cp-hero{grid-template-columns:1fr;padding:50px 20px 40px;}
+  .cp-content{padding:40px 20px;}
+  .cp-nav{padding:14px 20px;}
+  .learn-grid{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .how-steps{grid-template-columns:1fr;}
+  .city-grid{grid-template-columns:1fr;}
+  .wcu-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -550,11 +760,13 @@ footer p{font-size:.78rem;color:var(--muted);}
   </div>
   <ul class="nav-links">
     <li><a href="#services" onclick="switchTab('saas')">Services</a></li>
+    <li><a href="#germany-info">Germany Info</a></li>
     <li><a href="#learning" onclick="switchTab('learning')">Learning</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#full-faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#services" class="nav-cta">Get Started →</a>
+  <a href="#contact" class="nav-cta">Free Consultation →</a>
 </nav>
 
 <!-- HERO -->
@@ -562,8 +774,8 @@ footer p{font-size:.78rem;color:var(--muted);}
   <div class="hero-glow"></div>
   <div class="hero-left">
     <div class="hero-badge"><span class="dot"></span>Study in Germany · AI Education · Career Growth</div>
-    <h1>Your next step<br>starts <em>here</em></h1>
-    <p class="hero-sub">We empower students and professionals to build global careers — offering expert guidance for studying in Germany and world-class AI learning resources to help you stay ahead.</p>
+    <h1>Your dream of<br>studying in <em>Germany</em><br>starts here</h1>
+    <p class="hero-sub">We help Indian students build global careers by providing expert guidance for Masters in Germany — from university selection to visa approval and beyond. Plus world-class AI learning resources to stay ahead.</p>
     <div class="hero-actions">
       <a href="#services" class="btn-dark" onclick="switchTab('saas')">Explore Services</a>
       <a href="#learning" class="btn-outline" onclick="switchTab('learning')">Browse Courses →</a>
@@ -575,9 +787,9 @@ footer p{font-size:.78rem;color:var(--muted);}
       <!-- 🔁 Replace src with your actual photo path -->
       <img src="ganesh-dada.png" alt="Ganesh Dada">
       <div class="photo-tag">
-        <div class="photo-tag-icon">🚀</div>
+        <div class="photo-tag-icon">🇩🇪</div>
         <div class="photo-tag-text">
-          <strong>Founder & AI Builder</strong>
+          <strong>500+ Students Guided</strong>
           <span>Next Career Step</span>
         </div>
       </div>
@@ -593,72 +805,191 @@ footer p{font-size:.78rem;color:var(--muted);}
     <button class="cat-tab" onclick="switchTab('learning')" id="learning-tab">📚 AI Learning</button>
   </div>
 
-  <!-- CAT 1: SaaS + AI + Agency -->
+  <!-- CAT 1: Study in Germany Help -->
   <div class="cat-content active" id="cat-saas">
+
+    <!-- ══ OUR SERVICES (6 cards) ══ -->
     <div class="services-grid reveal">
       <div class="svc-card">
         <div class="svc-icon">🎓</div>
-        <h3>University & Program Guidance</h3>
-        <p>Shortlist German universities based on your background, budget, and goals.</p>
-        <div class="svc-tags"><span class="svc-tag">Universities</span><span class="svc-tag">Shortlist</span><span class="svc-tag">Guidance</span></div>
+        <h3>University Selection & Shortlisting</h3>
+        <p>We analyse your academic background, budget, and career goals to shortlist the best German universities and programs. No more guessing — get a personalised list of universities where you have the highest chance of admission.</p>
+        <div class="svc-tags"><span class="svc-tag">TU9</span><span class="svc-tag">FH</span><span class="svc-tag">Shortlisting</span><span class="svc-tag">Profile Evaluation</span></div>
       </div>
       <div class="svc-card">
         <div class="svc-icon">✍️</div>
-        <h3>SOP & Application Support</h3>
-        <p>Assistance in writing your Statement of Purpose, Letters of Recommendation, and preparing your application portfolio.</p>
-        <div class="svc-tags"><span class="svc-tag">SOP</span><span class="svc-tag">LOR</span><span class="svc-tag">Portfolio</span></div>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon">🛂</div>
-        <h3>Visa & Interview Prep</h3>
-        <p>Preparation of Visa documents and mock interview practice.</p>
-        <div class="svc-tags"><span class="svc-tag">Visa</span><span class="svc-tag">Interview</span><span class="svc-tag">Documents</span></div>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon">💼</div>
-        <h3>Career & Job Search</h3>
-        <p>Guidance for student jobs, internships, and post-study job search.</p>
-        <div class="svc-tags"><span class="svc-tag">Jobs</span><span class="svc-tag">Internships</span><span class="svc-tag">Career</span></div>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon">💰</div>
-        <h3>Scholarship Assistance</h3>
-        <p>Assistance in applying for scholarships like DAAD and Erasmus Mundus.</p>
-        <div class="svc-tags"><span class="svc-tag">DAAD</span><span class="svc-tag">Erasmus Mundus</span><span class="svc-tag">Scholarships</span></div>
+        <h3>SOP & Document Preparation</h3>
+        <p>Your Statement of Purpose can make or break your application. We help you write a compelling SOP, prepare Letters of Recommendation, format your CV, and organise every document required for German university applications.</p>
+        <div class="svc-tags"><span class="svc-tag">SOP</span><span class="svc-tag">LOR</span><span class="svc-tag">CV</span><span class="svc-tag">APS</span></div>
       </div>
       <div class="svc-card">
         <div class="svc-icon">🗣️</div>
-        <h3>Language Preparation</h3>
-        <p>Guidance for German (A1–B2) and IELTS/TOEFL preparation.</p>
-        <div class="svc-tags"><span class="svc-tag">German</span><span class="svc-tag">IELTS</span><span class="svc-tag">TOEFL</span></div>
+        <h3>German Language Guidance</h3>
+        <p>Even for English-taught programs, knowing German gives you an edge in daily life and jobs. We guide you on which level to target (A1–B2), recommend trusted resources, and help you plan your language learning timeline.</p>
+        <div class="svc-tags"><span class="svc-tag">German A1-B2</span><span class="svc-tag">IELTS</span><span class="svc-tag">TOEFL</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">💰</div>
+        <h3>Financial Planning & Blocked Account</h3>
+        <p>Germany requires proof of finances through a blocked account. We help you understand the exact amount needed, guide you through opening a blocked account with trusted providers, and plan your overall budget for living in Germany.</p>
+        <div class="svc-tags"><span class="svc-tag">Blocked Account</span><span class="svc-tag">Budget</span><span class="svc-tag">Scholarships</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🛂</div>
+        <h3>Visa Application Support</h3>
+        <p>The German student visa process can be stressful. We walk you through every step — from booking your VFS appointment to preparing documents and practicing for the visa interview. Our students have a high visa approval rate.</p>
+        <div class="svc-tags"><span class="svc-tag">Visa</span><span class="svc-tag">VFS</span><span class="svc-tag">Interview Prep</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">✈️</div>
+        <h3>Pre-Departure & Post-Arrival Support</h3>
+        <p>We don't stop at the visa. From packing tips and flight booking guidance to city registration (Anmeldung), opening a German bank account, and finding student accommodation — we support you even after you land in Germany.</p>
+        <div class="svc-tags"><span class="svc-tag">Anmeldung</span><span class="svc-tag">Bank Account</span><span class="svc-tag">Housing</span></div>
       </div>
     </div>
 
+    <!-- ══ FAST FACTS ══ -->
     <div class="germany-info reveal" style="margin-top: 40px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 36px 30px;">
       <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; color: var(--green);">Fast Facts About Germany:</h3>
       <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
         <tr style="border-bottom: 1px solid var(--line);">
           <td style="padding: 12px 0; font-weight: 600; width: 30%;">Universities</td>
-          <td style="padding: 12px 0; color: var(--muted);">400+ master's programs</td>
+          <td style="padding: 12px 0; color: var(--muted);">400+ public universities offering master's programs</td>
         </tr>
         <tr style="border-bottom: 1px solid var(--line);">
-          <td style="padding: 12px 0; font-weight: 600;">Fees</td>
-          <td style="padding: 12px 0; color: var(--muted);">€0–500 per semester (Almost free in public universities!)</td>
+          <td style="padding: 12px 0; font-weight: 600;">Tuition Fees</td>
+          <td style="padding: 12px 0; color: var(--muted);">€0–500 per semester (almost free at public universities!)</td>
         </tr>
         <tr style="border-bottom: 1px solid var(--line);">
           <td style="padding: 12px 0; font-weight: 600;">Post-study visa</td>
-          <td style="padding: 12px 0; color: var(--muted);">18 months post-study job seeker visa</td>
+          <td style="padding: 12px 0; color: var(--muted);">18-month job seeker visa after graduation</td>
         </tr>
         <tr style="border-bottom: 1px solid var(--line);">
           <td style="padding: 12px 0; font-weight: 600;">English programs</td>
-          <td style="padding: 12px 0; color: var(--muted);">1000+ English-taught master's</td>
+          <td style="padding: 12px 0; color: var(--muted);">1,600+ English-taught master's programs</td>
         </tr>
         <tr>
           <td style="padding: 12px 0; font-weight: 600;">Schengen access</td>
-          <td style="padding: 12px 0; color: var(--muted);">26 countries accessible</td>
+          <td style="padding: 12px 0; color: var(--muted);">Travel freely to 27 European countries</td>
         </tr>
       </table>
     </div>
+
+    <!-- ══ WHY GERMANY? (5 reasons) ══ -->
+    <div class="why-germany reveal" id="why-germany">
+      <div class="section-tag" style="margin-bottom:16px;">Why Germany?</div>
+      <h2 class="why-germany-title">5 Reasons why Germany is <em>perfect</em> for Indian students</h2>
+      <p class="why-germany-subtitle">Germany is one of the top destinations in the world for higher education. Here is why thousands of Indian students choose Germany for their Masters every year.</p>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-card-num">01</div>
+          <div class="why-card-icon">🎓</div>
+          <h4>Almost Free Education at Public Universities</h4>
+          <p>Most public universities in Germany charge zero tuition fees for master's programs — even for international students. You only pay a small semester contribution of €150–350, which often includes a public transport pass. This makes Germany one of the most affordable study destinations in the world compared to the US, UK, Canada, or Australia.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-num">02</div>
+          <div class="why-card-icon">🏭</div>
+          <h4>Strong Economy & World-Class Job Market</h4>
+          <p>Germany is the largest economy in Europe and home to global giants like BMW, Siemens, SAP, Bosch, and many more. After completing your degree, you get an 18-month job seeker visa to find work. Engineers, IT professionals, data scientists, and business graduates are in high demand. The average starting salary for master's graduates is €45,000–€55,000 per year.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-num">03</div>
+          <div class="why-card-icon">🌍</div>
+          <h4>Globally Recognised Degrees</h4>
+          <p>German universities consistently rank among the best in the world. A degree from TU Munich, RWTH Aachen, or Heidelberg University carries strong weight globally. German engineering, automotive, and technology education is respected by employers worldwide. Your degree will open doors not just in Germany but across Europe and beyond.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-num">04</div>
+          <div class="why-card-icon">🇪🇺</div>
+          <h4>Gateway to Europe & Schengen Travel</h4>
+          <p>With a German student visa, you can travel freely across 27 Schengen countries including France, Italy, Netherlands, Spain, and more. Germany's central location in Europe makes weekend trips easy and affordable. You gain exposure to multiple cultures, languages, and professional networks across the continent.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-num">05</div>
+          <div class="why-card-icon">🏠</div>
+          <h4>Clear Path to Permanent Residency (PR)</h4>
+          <p>Germany offers one of the most transparent paths to permanent residency in Europe. After completing your studies and working for 2 years, you can apply for a settlement permit. With the new Skilled Immigration Act, Germany actively welcomes skilled international graduates to stay and build their careers. Many Indian students successfully settle in Germany after their Masters.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ HOW IT WORKS (4 steps) ══ -->
+    <div class="how-section reveal">
+      <div class="section-tag" style="margin-bottom:16px;">How It Works</div>
+      <h2 class="how-title">Your journey to <em>Germany</em> in 4 simple steps</h2>
+      <p class="how-subtitle">We make the entire process smooth and stress-free. Here is how we work with you from start to finish.</p>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="step-num">1</div>
+          <h4>Free Consultation Call</h4>
+          <p>We start with a free 30-minute consultation call where we understand your academic background, career goals, and budget. We assess your profile and give you an honest evaluation of your chances of getting into German universities. No commitments — just clear guidance.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-num">2</div>
+          <h4>University Shortlisting & Application</h4>
+          <p>Based on your profile, we shortlist the best universities and programs for you. We then help you prepare all documents — SOP, LOR, CV, transcripts — and submit applications to multiple universities. We track deadlines and ensure nothing is missed.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-num">3</div>
+          <h4>Visa & Financial Preparation</h4>
+          <p>Once you receive your admission letter, we help you open a blocked account, prepare all visa documents, book your VFS appointment, and practice for the visa interview. We make sure your application is strong and complete.</p>
+        </div>
+        <div class="how-step">
+          <div class="step-num">4</div>
+          <h4>Pre-Departure & Arrival Support</h4>
+          <p>After your visa is approved, we help you with flight booking guidance, packing essentials, and a complete checklist for your first week in Germany. We also guide you through city registration, bank account opening, health insurance activation, and finding accommodation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ FAQ PREVIEW (5 questions) ══ -->
+    <div class="faq-section reveal">
+      <div class="section-tag" style="margin-bottom:16px;">Common Questions</div>
+      <h2 class="faq-title">Frequently asked <em>questions</em></h2>
+      <p class="faq-subtitle">Quick answers to the most common questions Indian students ask about studying in Germany.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Is education really free in Germany for Indian students?
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">Yes! Most public universities in Germany do not charge tuition fees for master's programs — this applies to all students regardless of nationality. You only pay a small semester contribution of around €150–350 per semester, which usually includes a public transport pass. However, you need to cover your living expenses, which are approximately €934 per month (the blocked account requirement as of 2024).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Do I need to know German to study in Germany?
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">Not necessarily. There are over 1,600 master's programs taught entirely in English in Germany. For these programs, you need IELTS (6.0–6.5) or TOEFL scores. However, learning basic German (A1–A2) is highly recommended for daily life — grocery shopping, dealing with authorities, and socialising. For German-taught programs, you will need a B2 or C1 level certificate (TestDaF or DSH).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What is a blocked account and how much money do I need?
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">A blocked account (Sperrkonto) is a special bank account required for your German student visa. It proves that you have enough money to support yourself for one year. As of 2024, you need to deposit approximately €11,208 (€934 per month × 12 months). You can withdraw a fixed amount each month after arriving in Germany. Providers like Expatrio, Fintiba, and Deutsche Bank offer blocked accounts for Indian students.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Can I work while studying in Germany?
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">Yes! International students in Germany are allowed to work up to 120 full days or 240 half days per year without needing a separate work permit. Many students work as student assistants (HiWi) at universities, part-time in companies, or in restaurants and retail. The average student job pays €12–€15 per hour. This income can significantly help cover your living expenses.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What happens after I complete my degree?
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">After completing your master's degree, Germany gives you an 18-month post-study job seeker visa. During this time, you can work in any job to support yourself while looking for a position related to your qualification. Once you find a job matching your degree, you can switch to a work visa (EU Blue Card). After working for about 21–33 months, you can apply for permanent residency. Germany actively wants skilled graduates to stay.</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:28px;">
+        <a href="#full-faq" class="btn-outline">View All 15 FAQs →</a>
+      </div>
+    </div>
+
   </div>
 
   <!-- CAT 2: Learning -->
@@ -675,12 +1006,8 @@ footer p{font-size:.78rem;color:var(--muted);}
       </div>
     </div>
     <div class="learning-grid reveal">
-
       <div class="course-card">
-        <div class="course-thumb c1">
-          🧠
-          <span class="course-badge badge-course">Course</span>
-        </div>
+        <div class="course-thumb c1">🧠<span class="course-badge badge-course">Course</span></div>
         <div class="course-body">
           <div class="course-meta"><span>Machine Learning</span><span class="dot-sep"></span><span>Beginner</span></div>
           <h3>ML Fundamentals: From Zero to Model</h3>
@@ -691,12 +1018,8 @@ footer p{font-size:.78rem;color:var(--muted);}
           </div>
         </div>
       </div>
-
       <div class="course-card">
-        <div class="course-thumb c2">
-          🎬
-          <span class="course-badge badge-video">Video</span>
-        </div>
+        <div class="course-thumb c2">🎬<span class="course-badge badge-video">Video</span></div>
         <div class="course-body">
           <div class="course-meta"><span>Deep Learning</span><span class="dot-sep"></span><span>Intermediate</span></div>
           <h3>Neural Networks & Deep Learning Crash Course</h3>
@@ -707,12 +1030,8 @@ footer p{font-size:.78rem;color:var(--muted);}
           </div>
         </div>
       </div>
-
       <div class="course-card">
-        <div class="course-thumb c3">
-          📄
-          <span class="course-badge badge-pdf">PDF</span>
-        </div>
+        <div class="course-thumb c3">📄<span class="course-badge badge-pdf">PDF</span></div>
         <div class="course-body">
           <div class="course-meta"><span>GenAI</span><span class="dot-sep"></span><span>All Levels</span></div>
           <h3>GenAI Roadmap — 12-Week Sprint Guide</h3>
@@ -723,12 +1042,8 @@ footer p{font-size:.78rem;color:var(--muted);}
           </div>
         </div>
       </div>
-
       <div class="course-card">
-        <div class="course-thumb c4">
-          🔗
-          <span class="course-badge badge-course">Course</span>
-        </div>
+        <div class="course-thumb c4">🔗<span class="course-badge badge-course">Course</span></div>
         <div class="course-body">
           <div class="course-meta"><span>LangChain · RAG</span><span class="dot-sep"></span><span>Advanced</span></div>
           <h3>Build RAG Apps with LangChain & Vector DBs</h3>
@@ -739,12 +1054,8 @@ footer p{font-size:.78rem;color:var(--muted);}
           </div>
         </div>
       </div>
-
       <div class="course-card">
-        <div class="course-thumb c5">
-          🎬
-          <span class="course-badge badge-video">Video</span>
-        </div>
+        <div class="course-thumb c5">🎬<span class="course-badge badge-video">Video</span></div>
         <div class="course-body">
           <div class="course-meta"><span>NLP</span><span class="dot-sep"></span><span>Intermediate</span></div>
           <h3>NLP & Transformers: BERT to GPT Explained</h3>
@@ -755,12 +1066,8 @@ footer p{font-size:.78rem;color:var(--muted);}
           </div>
         </div>
       </div>
-
       <div class="course-card">
-        <div class="course-thumb c6">
-          📄
-          <span class="course-badge badge-pdf">PDF</span>
-        </div>
+        <div class="course-thumb c6">📄<span class="course-badge badge-pdf">PDF</span></div>
         <div class="course-body">
           <div class="course-meta"><span>Interview Prep</span><span class="dot-sep"></span><span>All Levels</span></div>
           <h3>Top 100 AI/ML Interview Questions & Answers</h3>
@@ -771,41 +1078,529 @@ footer p{font-size:.78rem;color:var(--muted);}
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--        GERMANY INFORMATION PAGE                        -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="germany-page-section reveal" id="germany-info">
+  <div class="section-tag" style="margin-bottom:18px;">Germany Information</div>
+  <h2 class="germany-page-title">Everything you need to know about <em>studying in Germany</em></h2>
+  <p class="germany-page-sub">A complete guide for Indian students planning to pursue their Masters in Germany. From university types to PR — all your questions answered in one place.</p>
+
+  <!-- Why Study in Germany -->
+  <div class="info-block">
+    <h3><span class="info-icon">🇩🇪</span> Why Study in Germany?</h3>
+    <p>Germany has become one of the most popular study destinations for Indian students — and for good reason. With nearly zero tuition fees at public universities, world-class education quality, a booming job market, and a clear path to permanent residency, Germany offers everything an ambitious student needs. Over 40,000 Indian students are currently studying in Germany, making it the third largest group of international students in the country. Whether you are an engineering graduate, a business student, or from a science background, Germany has programs that match your career goals.</p>
+  </div>
+
+  <!-- Types of Universities -->
+  <div class="info-block">
+    <h3><span class="info-icon">🏛️</span> Types of Universities in Germany</h3>
+    <p>Germany has two main types of universities, and understanding the difference is important for choosing the right one for you.</p>
+    <div class="info-sub">Technical Universities (Technische Universität — TU)</div>
+    <p>These are traditional research-oriented universities that offer a wide range of subjects including engineering, natural sciences, humanities, and social sciences. They focus heavily on academic research, theory, and innovation. Famous examples include TU Munich, RWTH Aachen, TU Berlin, and KIT Karlsruhe. If you want a strong research-oriented degree or plan to pursue a PhD later, a TU is ideal for you.</p>
+    <div class="info-sub">Universities of Applied Sciences (Fachhochschule — FH)</div>
+    <p>FH universities focus on practical, hands-on education. Programs include mandatory internships and industry projects. They have smaller class sizes, closer ties with local industries, and a more practical curriculum. Examples include Munich University of Applied Sciences and Frankfurt University of Applied Sciences. If you want to start working immediately after your degree, an FH can be a great choice.</p>
+    <div class="info-sub">Key Differences</div>
+    <ul>
+      <li>TU = Research-focused, theoretical, larger class sizes, better for PhD aspirations</li>
+      <li>FH = Industry-focused, practical, mandatory internships, better for direct job placement</li>
+      <li>Both are equally respected by German employers</li>
+      <li>Both offer tuition-free education at public institutions</li>
+    </ul>
+  </div>
+
+  <!-- Popular Cities -->
+  <div class="info-block">
+    <h3><span class="info-icon">🏙️</span> Popular Cities for Indian Students</h3>
+    <p>Germany has many student-friendly cities. Here are the most popular ones among Indian students, along with approximate monthly living costs.</p>
+    <div class="city-grid">
+      <div class="city-card">
+        <h4>Munich</h4>
+        <p>€950–€1,200/month<br>TU Munich, LMU Munich<br>Expensive but top career opportunities</p>
+      </div>
+      <div class="city-card">
+        <h4>Berlin</h4>
+        <p>€850–€1,100/month<br>TU Berlin, HU Berlin, FU Berlin<br>Startup hub, vibrant culture</p>
+      </div>
+      <div class="city-card">
+        <h4>Stuttgart</h4>
+        <p>€800–€1,000/month<br>University of Stuttgart<br>Automotive capital (Bosch, Daimler, Porsche)</p>
+      </div>
+      <div class="city-card">
+        <h4>Aachen</h4>
+        <p>€700–€900/month<br>RWTH Aachen<br>Top engineering school, affordable</p>
+      </div>
+      <div class="city-card">
+        <h4>Darmstadt</h4>
+        <p>€750–€950/month<br>TU Darmstadt<br>Strong CS & engineering programs</p>
+      </div>
+      <div class="city-card">
+        <h4>Hamburg</h4>
+        <p>€850–€1,050/month<br>University of Hamburg, TUHH<br>Major port city, strong economy</p>
+      </div>
+      <div class="city-card">
+        <h4>Dresden</h4>
+        <p>€600–€800/month<br>TU Dresden<br>Very affordable, excellent quality of life</p>
+      </div>
+      <div class="city-card">
+        <h4>Karlsruhe</h4>
+        <p>€700–€900/month<br>KIT Karlsruhe<br>Top tech university, great IT hub</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admission Requirements -->
+  <div class="info-block">
+    <h3><span class="info-icon">📋</span> Admission Requirements</h3>
+    <p>Each university and program may have slightly different requirements, but here are the general admission requirements for Indian students applying to master's programs in Germany.</p>
+    <ul>
+      <li>A relevant bachelor's degree (typically 4 years) from a recognised Indian university with a minimum of 60–70% marks or equivalent CGPA</li>
+      <li>English proficiency test — IELTS (6.0–6.5) or TOEFL (80–100) for English-taught programs</li>
+      <li>German language certificate — TestDaF or DSH (B2/C1 level) for German-taught programs</li>
+      <li>Statement of Purpose (SOP) — a well-written essay explaining your motivation and goals</li>
+      <li>Letters of Recommendation (LOR) — typically 2, from professors or employers</li>
+      <li>Updated CV/Resume in the Europass or German format</li>
+      <li>APS certificate (Akademische Prüfstelle) — mandatory for Indian students, verifying your academic credentials</li>
+      <li>GRE/GMAT scores — required by some specific programs (not all)</li>
+      <li>Portfolio or work samples — required for design, architecture, or arts programs</li>
+    </ul>
+  </div>
+
+  <!-- Financial Requirements -->
+  <div class="info-block">
+    <h3><span class="info-icon">💶</span> Financial Requirements & Blocked Account</h3>
+    <p>Germany requires international students to prove they can financially support themselves. Here is what you need to know.</p>
+    <div class="info-sub">Blocked Account (Sperrkonto)</div>
+    <p>A blocked account is mandatory for your student visa application. You need to deposit approximately €11,208 (as of 2024) into this account before applying for your visa. Once in Germany, you can withdraw about €934 per month to cover your living expenses. Popular blocked account providers include Expatrio, Fintiba, and Deutsche Bank.</p>
+    <div class="info-sub">Overall Cost Breakdown (Monthly)</div>
+    <ul>
+      <li>Rent — €300–€600 (shared accommodation or student dormitory)</li>
+      <li>Food — €200–€300 (cooking at home saves money)</li>
+      <li>Health Insurance — €110–€120 (mandatory for all students)</li>
+      <li>Transport — €30–€60 (semester ticket covers most city travel)</li>
+      <li>Miscellaneous — €100–€150 (phone, internet, personal expenses)</li>
+      <li>Total — approximately €750–€1,200 per month depending on the city</li>
+    </ul>
+    <div class="info-sub">Health Insurance</div>
+    <p>Health insurance is mandatory in Germany. Public health insurance for students costs approximately €110–€120 per month. Providers like TK (Techniker Krankenkasse), AOK, and Barmer are popular choices among students. You must have health insurance before you can register at your university.</p>
+  </div>
+
+  <!-- Scholarships -->
+  <div class="info-block">
+    <h3><span class="info-icon">🏆</span> Scholarships for Indian Students</h3>
+    <p>While tuition is mostly free, living costs can add up. These scholarships can help.</p>
+    <div class="info-sub">DAAD Scholarships</div>
+    <p>The German Academic Exchange Service (DAAD) is the largest funding organisation in Germany. It offers various scholarships for Indian students including the DAAD Study Scholarship for master's students (€934/month + travel allowance + health insurance). Applications typically open 12–15 months before the program starts. DAAD also offers short-term research grants and in-country scholarships.</p>
+    <div class="info-sub">Other Scholarships</div>
+    <ul>
+      <li>Erasmus Mundus Joint Master Degrees — fully funded EU scholarships covering tuition, living costs, and travel</li>
+      <li>Heinrich Böll Foundation Scholarship — for students with strong social and political engagement</li>
+      <li>Deutschlandstipendium — €300/month merit-based scholarship offered by individual universities</li>
+      <li>Friedrich Ebert Foundation — for students with outstanding academic records and social commitment</li>
+      <li>SBW Berlin Scholarship — for students from developing countries, covers living and study costs</li>
+      <li>Individual university scholarships — many universities offer their own merit-based scholarships</li>
+    </ul>
+  </div>
+
+  <!-- Student Life & Part-Time Work -->
+  <div class="info-block">
+    <h3><span class="info-icon">🎒</span> Student Life & Part-Time Work Rules</h3>
+    <p>Life as an Indian student in Germany is an exciting mix of academics, work, and European culture.</p>
+    <div class="info-sub">Part-Time Work</div>
+    <ul>
+      <li>You can work 120 full days or 240 half days per year without a work permit</li>
+      <li>Student assistant (HiWi) jobs at universities pay €12–€15 per hour</li>
+      <li>Working student (Werkstudent) positions in companies pay €13–€20 per hour and give industry experience</li>
+      <li>Mini-jobs (up to €520/month) are also popular among students</li>
+      <li>Many students earn €400–€800 per month through part-time work</li>
+    </ul>
+    <div class="info-sub">Student Life</div>
+    <ul>
+      <li>German universities have excellent libraries, labs, and sports facilities</li>
+      <li>The Mensa (university canteen) offers meals for €2–€5</li>
+      <li>Student organisations and clubs offer everything from sports to cultural events</li>
+      <li>Indian student communities are active in almost every major German city</li>
+      <li>Public transport is well-connected — most semester tickets cover the entire region</li>
+      <li>Grocery shopping at Aldi, Lidl, and Penny is very affordable</li>
+    </ul>
+  </div>
+
+  <!-- PR & Settlement -->
+  <div class="info-block">
+    <h3><span class="info-icon">🏡</span> Permanent Residency (PR) & Settlement After Studies</h3>
+    <p>Germany offers one of the most straightforward paths to permanent residency for international graduates. Here is the typical timeline.</p>
+    <ul>
+      <li><strong>Step 1 — Complete your master's degree</strong> (2 years typical)</li>
+      <li><strong>Step 2 — Apply for the 18-month job seeker visa</strong> (you can work any job during this period to support yourself)</li>
+      <li><strong>Step 3 — Find a job matching your qualification</strong> and switch to a work permit or EU Blue Card</li>
+      <li><strong>Step 4 — Work for 21–33 months</strong> (with German language skills at B1 level, you can apply for PR in 21 months with EU Blue Card)</li>
+      <li><strong>Step 5 — Apply for permanent settlement permit</strong> (Niederlassungserlaubnis)</li>
+      <li><strong>Step 6 — After 6–8 years total in Germany,</strong> you can apply for German citizenship if desired</li>
+    </ul>
+    <p style="margin-top:14px;">The new Skilled Immigration Act (Fachkräfteeinwanderungsgesetz) has made it even easier for skilled graduates to stay and work in Germany. Germany actively needs skilled professionals in engineering, IT, healthcare, and other sectors — making it a welcoming destination for Indian graduates looking to build long-term careers in Europe.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--        DETAILED SERVICES PAGE                          -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="detailed-services reveal" id="detailed-services">
+  <div class="section-tag" style="margin-bottom:18px;">Our Services in Detail</div>
+  <h2 class="germany-page-title">Complete guidance for your <em>Germany journey</em></h2>
+  <p class="germany-page-sub">Each of our services is designed to take the stress and confusion out of your Germany application process. Here is exactly what you get with each service.</p>
+
+  <div class="detailed-svc">
+    <div class="dsvc-icon">🎓</div>
+    <div class="dsvc-content">
+      <h3>University Selection and Shortlisting</h3>
+      <p>Choosing the right university is the most important step in your Germany journey. With over 400 public universities and thousands of programs, it is easy to feel overwhelmed. We take your complete academic profile — your bachelor's degree, marks, CGPA, work experience, research interests, and budget — and match you with the best-fit universities and programs. We do not just give you a random list. Every recommendation is based on data, admission trends, and our experience with past successful applicants.</p>
+      <div class="dsvc-sub">What is Included</div>
+      <ul>
+        <li>Detailed profile evaluation based on your academics, skills, and career goals</li>
+        <li>Shortlist of 8–12 universities with program links, deadlines, and requirements</li>
+        <li>Comparison of TU vs FH programs based on your career plans</li>
+        <li>City-wise cost analysis to match your budget</li>
+        <li>Admission probability assessment for each shortlisted university</li>
+        <li>Guidance on NC (Numerus Clausus) restrictions and eligibility criteria</li>
+      </ul>
+      <div class="dsvc-who">
+        <strong>Who Needs This?</strong>
+        Any Indian student who has completed or is about to complete their bachelor's degree and wants to pursue a master's in Germany but is confused about which universities to target. Also ideal for students who have been rejected before and want a better strategy.
+      </div>
+    </div>
+  </div>
+
+  <div class="detailed-svc">
+    <div class="dsvc-icon">✍️</div>
+    <div class="dsvc-content">
+      <h3>SOP and Document Preparation</h3>
+      <p>Your Statement of Purpose is the most critical document in your application. German universities evaluate your SOP carefully to understand your motivation, academic journey, and future goals. A weak SOP can cost you admission even with strong grades. We help you craft a compelling, well-structured SOP that highlights your strengths and aligns with the specific program you are applying to. We also help with all other documents to ensure your application package is complete and professional.</p>
+      <div class="dsvc-sub">What is Included</div>
+      <ul>
+        <li>One-on-one brainstorming session to understand your story and motivations</li>
+        <li>Custom SOP writing and editing (up to 3 revisions per university)</li>
+        <li>Letter of Recommendation (LOR) drafts and guidance</li>
+        <li>CV/Resume formatting in the Europass or German standard format</li>
+        <li>Document checklist with university-specific requirements</li>
+        <li>APS certificate application guidance (for Indian students)</li>
+        <li>Transcript and degree attestation guidance</li>
+      </ul>
+      <div class="dsvc-who">
+        <strong>Who Needs This?</strong>
+        Students who struggle with writing or are unsure how to present their profile effectively. Also for students who have been rejected previously and suspect their SOP or documents were weak. If you are applying to multiple universities, this service ensures each SOP is tailored.
+      </div>
+    </div>
+  </div>
+
+  <div class="detailed-svc">
+    <div class="dsvc-icon">🗣️</div>
+    <div class="dsvc-content">
+      <h3>German Language Guidance</h3>
+      <p>Even if your program is in English, knowing German makes a massive difference in your daily life, part-time job opportunities, and future career in Germany. Many employers prefer candidates who speak at least basic German. We do not teach German ourselves, but we provide expert guidance on how to plan your language learning journey efficiently.</p>
+      <div class="dsvc-sub">What is Included</div>
+      <ul>
+        <li>Assessment of which language level you need (A1, A2, B1, B2, or C1)</li>
+        <li>Recommended learning resources — apps, YouTube channels, books, and online courses</li>
+        <li>Guidance on choosing the right language institute in India (Goethe Institut, Max Mueller Bhavan, etc.)</li>
+        <li>IELTS/TOEFL preparation tips and score requirements for your target universities</li>
+        <li>TestDaF and DSH exam guidance for German-taught programs</li>
+        <li>Timeline planning to reach your target level before your visa appointment</li>
+      </ul>
+      <div class="dsvc-who">
+        <strong>Who Needs This?</strong>
+        Every student going to Germany. Whether your program is in English or German, learning the language helps you integrate better, find better jobs, and enjoy your time in Germany. Especially important for students planning to settle in Germany long-term.
+      </div>
+    </div>
+  </div>
+
+  <div class="detailed-svc">
+    <div class="dsvc-icon">💰</div>
+    <div class="dsvc-content">
+      <h3>Financial Planning and Blocked Account</h3>
+      <p>Money is one of the biggest concerns for Indian students going abroad. Germany is affordable, but you need proper financial planning. The blocked account is mandatory for your visa, and many students make mistakes during this process. We guide you through every financial aspect — from the blocked account to monthly budgeting in Germany.</p>
+      <div class="dsvc-sub">What is Included</div>
+      <ul>
+        <li>Step-by-step guidance on opening a blocked account (Expatrio, Fintiba, or Deutsche Bank)</li>
+        <li>Explanation of how much money you need and when to deposit it</li>
+        <li>Complete monthly budget planning based on your chosen city</li>
+        <li>Scholarship identification and application assistance (DAAD, Deutschlandstipendium, etc.)</li>
+        <li>Education loan guidance — which banks offer the best terms for Germany</li>
+        <li>Health insurance selection guidance (TK, AOK, Barmer)</li>
+        <li>Tips on saving money as a student in Germany</li>
+      </ul>
+      <div class="dsvc-who">
+        <strong>Who Needs This?</strong>
+        Students from middle-class families who need to plan their finances carefully. Students who are confused about the blocked account process. Also useful for students who want to explore scholarship options and education loans.
+      </div>
+    </div>
+  </div>
+
+  <div class="detailed-svc">
+    <div class="dsvc-icon">🛂</div>
+    <div class="dsvc-content">
+      <h3>Visa Application Support</h3>
+      <p>The German student visa is one of the most critical steps in your journey. A single mistake in your documents or a poor interview performance can lead to rejection. We have helped hundreds of students successfully get their German student visa, and we know exactly what the embassy looks for.</p>
+      <div class="dsvc-sub">What is Included</div>
+      <ul>
+        <li>Complete visa document checklist specific to your situation</li>
+        <li>Document review and feedback before submission</li>
+        <li>VFS appointment booking guidance and tips</li>
+        <li>Cover letter drafting for the visa application</li>
+        <li>Mock visa interview sessions with commonly asked questions</li>
+        <li>Guidance on what to do if your visa is delayed or rejected</li>
+        <li>Travel insurance and flight booking tips</li>
+      </ul>
+      <div class="dsvc-who">
+        <strong>Who Needs This?</strong>
+        Every student who has received an admission letter from a German university and needs to apply for a student visa. Especially important for students who are applying for the first time and have no experience with the embassy process.
+      </div>
+    </div>
+  </div>
+
+  <div class="detailed-svc">
+    <div class="dsvc-icon">✈️</div>
+    <div class="dsvc-content">
+      <h3>Pre-Departure and Post-Arrival Support</h3>
+      <p>Getting your visa is not the end — it is the beginning. Landing in a new country can be overwhelming, especially when you need to handle registration, banking, housing, and university enrollment all within the first few weeks. We make sure you are fully prepared before you leave India and supported after you land in Germany.</p>
+      <div class="dsvc-sub">What is Included</div>
+      <ul>
+        <li>Complete packing checklist — what to bring and what to buy in Germany</li>
+        <li>Flight booking tips and luggage guidelines</li>
+        <li>First-week checklist — city registration (Anmeldung), bank account, SIM card</li>
+        <li>German bank account opening guidance (N26, DKB, Commerzbank)</li>
+        <li>Student accommodation search tips — WG-Gesucht, Studierendenwerk dormitories</li>
+        <li>University enrollment and semester ticket activation guidance</li>
+        <li>Connecting you with Indian student communities in your city</li>
+        <li>Emergency contacts and support for your first month</li>
+      </ul>
+      <div class="dsvc-who">
+        <strong>Who Needs This?</strong>
+        Every student who is going to Germany for the first time. Even if you have done everything independently so far, the post-arrival process can be confusing. This service ensures you settle in smoothly and don't miss any important steps.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--        ABOUT SECTION                                    -->
+<!-- ═══════════════════════════════════════════════════════ -->
 <section class="about" id="about">
   <div class="about-photo-wrap reveal">
     <div class="about-photo-frame">
-      <!-- 🔁 Replace src with your actual photo path -->
-      <img src="ganesh-dada.png" alt="Ganesh Dada">
+      <img src="ganesh-dada.png" alt="Founder">
     </div>
     <div class="about-accent"></div>
   </div>
   <div class="about-content reveal">
-    <div class="section-tag">About the Founder</div>
-    <h2>Building the future<br>of <em>AI careers</em></h2>
-    <p>Hi, I'm the founder of Next Career Step — a platform born from my own journey into AI and GenAI. I built this to help students and professionals skip the confusion and learn what actually matters in the industry.</p>
-    <p>We combine real SaaS products, AI consulting services, and structured learning — so whether you want to build, hire, or upskill, we've got you covered.</p>
-    <div class="about-skills">
-      <span class="skill-chip">Python</span>
-      <span class="skill-chip">LangChain</span>
-      <span class="skill-chip">RAG</span>
-      <span class="skill-chip">LLMs</span>
-      <span class="skill-chip">FastAPI</span>
-      <span class="skill-chip">GenAI</span>
+    <div class="section-tag">About Us</div>
+    <h2>Helping Indian students<br>achieve their <em>German dream</em></h2>
+
+    <!-- Our Story -->
+    <p><strong>Our Story:</strong> Next Career Step was born from a simple observation — thousands of talented Indian students dream of studying in Germany but give up because of confusing processes, unreliable information, and expensive consultancies that don't deliver real results. Our founder experienced this confusion firsthand and decided to create a consultancy that is honest, affordable, and genuinely helpful. We started by helping a small group of students, and today we have guided hundreds of Indian students to successfully get into top German universities.</p>
+
+    <p>We are not just a consultancy — we are your partners throughout the entire journey, from your first consultation call to your first day at a German university and beyond.</p>
+
+    <!-- Mission & Vision -->
+    <div class="mv-grid">
+      <div class="mv-card">
+        <h4>🎯 Our Mission</h4>
+        <p>To make quality German education accessible to every deserving Indian student by providing honest, affordable, and comprehensive guidance at every step of the process.</p>
+      </div>
+      <div class="mv-card">
+        <h4>🔮 Our Vision</h4>
+        <p>To become India's most trusted consultancy for studying in Germany — known for transparency, student success, and genuine care for every student's future.</p>
+      </div>
     </div>
+
+    <!-- Why Choose Us -->
+    <div style="margin-top:28px;">
+      <h3 style="font-size:1.05rem;font-weight:600;margin-bottom:4px;">Why Choose Us?</h3>
+      <p style="font-size:.88rem;color:var(--muted);margin-bottom:16px;">We are different from typical consultancies. Here is what sets us apart.</p>
+    </div>
+    <div class="wcu-grid">
+      <div class="wcu-item">
+        <div class="wcu-icon">✅</div>
+        <div>
+          <h5>Personalised Guidance</h5>
+          <p>No cookie-cutter advice. Every student gets a customised plan based on their unique profile and goals.</p>
+        </div>
+      </div>
+      <div class="wcu-item">
+        <div class="wcu-icon">💰</div>
+        <div>
+          <h5>Affordable Fees</h5>
+          <p>We believe quality guidance shouldn't be expensive. Our fees are a fraction of what big consultancies charge.</p>
+        </div>
+      </div>
+      <div class="wcu-item">
+        <div class="wcu-icon">🎓</div>
+        <div>
+          <h5>Germany Specialists</h5>
+          <p>We focus exclusively on Germany. Our deep expertise means better advice and higher success rates.</p>
+        </div>
+      </div>
+      <div class="wcu-item">
+        <div class="wcu-icon">🤝</div>
+        <div>
+          <h5>End-to-End Support</h5>
+          <p>From first call to landing in Germany — we don't disappear after taking your money. We are with you throughout.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-skills">
+      <span class="skill-chip">Germany Expert</span>
+      <span class="skill-chip">500+ Students</span>
+      <span class="skill-chip">Visa Success</span>
+      <span class="skill-chip">Free Consultation</span>
+      <span class="skill-chip">AI Education</span>
+      <span class="skill-chip">Career Guidance</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--        FULL FAQ PAGE (15 Questions)                     -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="full-faq reveal" id="full-faq">
+  <div class="section-tag" style="margin-bottom:18px;">Frequently Asked Questions</div>
+  <h2 class="faq-title">All your questions about <em>studying in Germany</em> — answered</h2>
+  <p class="faq-subtitle">Here are the 15 most common questions Indian students ask us. Click on any question to see the detailed answer.</p>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        1. Is education really free in Germany for Indian students?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">Yes, most public universities in Germany do not charge tuition fees for master's programs. This applies to all nationalities, including Indian students. You only pay a small semester contribution of €150–350, which usually includes a public transport pass for the semester. The only exception is the state of Baden-Württemberg, which charges €1,500 per semester for non-EU students. However, even this is much cheaper than universities in the US, UK, or Australia.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        2. Do I need to learn German to study in Germany?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">For English-taught programs, no — you only need IELTS (6.0–6.5) or TOEFL (80–100). There are over 1,600 master's programs in Germany taught entirely in English. However, learning German to at least A2 or B1 level is strongly recommended for daily life. It helps with grocery shopping, dealing with German authorities, understanding documents, making local friends, and getting better part-time jobs. For German-taught programs, you need B2 or C1 level certification through TestDaF or DSH.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        3. What is the blocked account and how much money do I need?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">A blocked account (Sperrkonto) is a special type of bank account required for your German student visa. It proves that you have enough money to support yourself for one year in Germany. As of 2024, you need to deposit approximately €11,208 (€934 × 12 months). After arriving in Germany, you can withdraw a maximum of €934 per month. You can open a blocked account from India through providers like Expatrio (most popular among Indian students), Fintiba, or Deutsche Bank. The process takes about 1–2 weeks.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        4. What is the APS certificate and is it mandatory?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">APS stands for Akademische Prüfstelle (Academic Evaluation Centre). It is mandatory for Indian students applying to German universities. The APS certificate verifies that your Indian academic degrees are genuine and equivalent to German standards. The process involves submitting your academic documents to the APS India office in New Delhi, followed by an interview (for some applicants). The entire process can take 4–8 weeks, so start early. Without an APS certificate, most German universities will not process your application.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        5. When should I start preparing for my Germany application?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">Ideally, start 12–18 months before your intended semester. For a winter semester (October start), begin preparing by January of the previous year. For a summer semester (April start), begin by June–July of the previous year. Your timeline should include: APS certificate (4–8 weeks), language test preparation (2–3 months), university shortlisting and SOP writing (1–2 months), application submission (varies by university), blocked account opening (1–2 weeks), and visa application (6–8 weeks before departure).</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        6. Can I work while studying in Germany?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">Yes! International students in Germany are allowed to work 120 full days or 240 half days per year without needing a separate work permit. Many students work as HiWi (student assistants) at universities, Werkstudent (working students) at companies, or in mini-jobs. The minimum wage in Germany is €12.41 per hour (2024), and many student jobs pay more. Students typically earn €400–€800 per month through part-time work, which can cover a significant portion of living expenses.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        7. What are the popular courses for Indian students in Germany?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">The most popular master's programs among Indian students include: Computer Science and Data Science, Mechanical Engineering, Electrical Engineering, Automotive Engineering, Business Administration and Management, Information Systems, Robotics and AI, Civil Engineering, Renewable Energy, and Biotechnology. Germany is especially strong in engineering and technology fields, and these graduates have excellent job prospects in the German market.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        8. What is the difference between TU and FH universities?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">TU (Technische Universität) universities are research-focused with theoretical depth, larger class sizes, and are ideal for students who want to pursue a PhD or career in research. FH (Fachhochschule / University of Applied Sciences) universities are practice-oriented with mandatory internships, smaller classes, and strong industry connections — ideal for students who want to enter the job market immediately after graduation. Both are equally respected by German employers, and both are tuition-free at public institutions.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        9. How do I find accommodation in Germany?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">Finding accommodation can be challenging, especially in popular cities like Munich and Berlin. Your options include: Studierendenwerk dormitories (cheapest, apply early as waiting lists are long, €200–€400/month), shared apartments called WG (Wohngemeinschaft) found on WG-Gesucht.de (€300–€600/month), and private apartments (€500–€1000+/month). We recommend applying for student dormitories as soon as you receive your admission letter. For WGs, start searching 2–3 months before your arrival.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        10. Is health insurance mandatory for students in Germany?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">Yes, health insurance is mandatory for all students in Germany. You cannot register at your university without proof of health insurance. Students under 30 years can get public health insurance (gesetzliche Krankenversicherung) for approximately €110–€120 per month. Popular providers include TK (Techniker Krankenkasse), AOK, and Barmer. If you are over 30 or in certain situations, you may need private health insurance, which can cost more. We recommend enrolling in public health insurance for the best coverage.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        11. What are my chances of getting a scholarship?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">Scholarships in Germany are competitive but achievable. The DAAD (German Academic Exchange Service) is the largest provider, offering €934/month plus health insurance and travel costs. Other options include Erasmus Mundus, Deutschlandstipendium (€300/month), and university-specific scholarships. To improve your chances, start applying early (12–15 months before), maintain strong academics (above 8.0 CGPA), have relevant work or research experience, and write a strong motivation letter. Even if you don't get a full scholarship, Germany's low costs make it affordable.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        12. What is the visa process for Indian students?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">After receiving your admission letter, you apply for a German student visa through VFS Global in India. The process involves: booking a VFS appointment (do this early as slots fill up fast), preparing documents (admission letter, blocked account proof, health insurance, APS certificate, passport, photographs, cover letter), attending the appointment and submitting documents, and waiting for processing (typically 4–8 weeks). The visa fee is €75. You will receive a 3-month entry visa, which you convert to a residence permit after arriving in Germany.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        13. Can I bring my family or spouse to Germany on a student visa?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">Yes, your spouse can join you in Germany through a family reunion visa (Familienzusammenführung). The requirements include: proof of adequate living space, sufficient financial resources for both of you (higher blocked account amount), valid health insurance for your spouse, and basic German language skills for your spouse (A1 level). Your spouse will also be allowed to work in Germany without restrictions. However, the process can take a few months, so plan accordingly.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        14. What happens if my visa gets rejected?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">Visa rejections are rare if your documents are in order, but they do happen. Common reasons include: insufficient financial proof, incomplete documents, unconvincing motivation, or inconsistencies in your application. If your visa is rejected, you can file a remonstrance (formal appeal) within one month, addressing the reasons for rejection. Many successful appeals result in visa approval. We help our students prepare strong applications to minimize rejection risks and assist with remonstrance if needed.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        15. Can I get permanent residency (PR) in Germany after my studies?
+        <span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a">Yes, Germany offers a very clear path to PR for international graduates. After completing your degree, you get an 18-month job seeker visa. Once you find a job matching your qualification, you switch to a work permit or EU Blue Card. With an EU Blue Card and B1 German language skills, you can apply for permanent residency (Niederlassungserlaubnis) after just 21 months of working. Without B1 German, it takes 33 months. After 6–8 years in Germany, you can also apply for German citizenship. This is one of the most attractive aspects of studying in Germany compared to other countries.</div>
+    </div>
+
   </div>
 </section>
 
 <!-- CTA -->
 <div class="cta reveal">
-  <h2>Ready to take your next step?</h2>
-  <p>Whether you want to build with AI or learn it — we're here for both.</p>
-  <a href="#services" class="btn-white">Get Started Today →</a>
+  <h2>Ready to start your Germany journey?</h2>
+  <p>Book a free consultation call today. Let us evaluate your profile and create a personalised roadmap for your Masters in Germany.</p>
+  <a href="#contact" class="btn-white">Book Free Consultation →</a>
 </div>
 
 <!-- CONTACT -->
@@ -852,7 +1647,7 @@ footer p{font-size:.78rem;color:var(--muted);}
       </div>
       <div>
         <label for="wa-message" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Message / Inquiry</label>
-        <textarea id="wa-message" rows="4" required placeholder="How can we help you?" style="width: 100%; padding: 14px 18px; border: 1.5px solid var(--line); border-radius: 12px; font-family: inherit; font-size: 0.9rem; outline: none; resize: vertical; transition: border 0.2s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--line)'"></textarea>
+        <textarea id="wa-message" rows="4" required placeholder="I want to study Masters in Germany. Please help me with..." style="width: 100%; padding: 14px 18px; border: 1.5px solid var(--line); border-radius: 12px; font-family: inherit; font-size: 0.9rem; outline: none; resize: vertical; transition: border 0.2s;" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--line)'"></textarea>
       </div>
       <button type="submit" class="btn-dark" style="width: 100%; margin-top: 10px; cursor: pointer; border: none; padding: 16px; font-size: 1rem;">Book Consultation via WhatsApp</button>
     </form>
@@ -1141,10 +1936,11 @@ function sendWhatsApp(e) {
   </div>
   <p>© 2026 Next Career Step. All rights reserved.</p>
   <div class="footer-links">
-    <a href="#">Privacy</a>
-    <a href="#">Courses</a>
+    <a href="#services">Services</a>
+    <a href="#germany-info">Germany Info</a>
+    <a href="#full-faq">FAQ</a>
+    <a href="#contact">Contact</a>
     <a href="#">LinkedIn</a>
-    <a href="#">Contact</a>
   </div>
 </footer>
 
@@ -1169,6 +1965,10 @@ function closeCourse(){
 function toggleModule(header){
   const module=header.parentElement;
   module.classList.toggle('open');
+}
+function toggleFaq(q){
+  const item = q.parentElement;
+  item.classList.toggle('open');
 }
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
